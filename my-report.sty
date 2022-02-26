@@ -1,0 +1,129 @@
+%%%%%%%%%%
+%	Package selection for university reports using the article class.
+%	Includes packages to manage:
+%		- Document layout and text formatting
+% 		- Figures, tables, plots, and captions suport
+% 		- Maths and other similar
+% 		- Bibliography
+%		- Hyperlinks and finishing touches
+% 	
+%	Created by Lyubomir Shoylev, 2022.
+%%%%%%%%%%
+
+%%% Enables us to import the file as a package
+\ProvidesPackage{my-report}
+
+% Credentials macro
+\makeatletter
+\let\myCredentials\@author
+\makeatother
+
+
+%%% Document layout & text formatting
+% Margins
+\usepackage[margin=0.75in]{geometry}
+
+% Language and encoding
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+% Header and footer content
+% \pagestyle{headings}  -- simple built in solution that looks ~fine
+% Better - use fancyhdr
+\usepackage{lastpage} % provides last page number via \pageref{LastPage}
+\usepackage[]{fancyhdr}
+% new pagestyle that is customisable with \fancyhead and \fancyfoot
+\pagestyle{fancy}
+% renew markings straight afrer \pagestyle{fancy} to display differently
+\renewcommand{\sectionmark}[1]{\markboth{Section \thesection.\ #1}{}}
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection.\ #1}}
+\fancyhead{} % - clear previous setup
+\fancyhead[LE,RO]{\thepage~of~\pageref{LastPage}}
+\fancyhead[CE]{\textit{\myCredentials}}
+\fancyhead[CO]{\textit{\leftmark}}
+\fancyfoot{} 
+% \fancyfoot[LE,RO]{\thepage~of~\pageref{LastPage}}
+% \fancyfoot[LO,RE]{Lyubomir Shoylev, shil5377}
+\renewcommand{\headrulewidth}{0.4pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% renew pagestyle for the titular page - have to setup with \thispagestyle{plain} after the \maketitle / similar setup
+\fancypagestyle{plain}{%
+\fancyhf{}% clear all header and footer fields
+\fancyfoot[C]{\textit{\myCredentials}}% except the center
+\fancyfoot[R]{\thepage~of~\pageref{LastPage}}%
+\renewcommand{\headrulewidth}{0pt}%
+\renewcommand{\footrulewidth}{0.4pt}%
+}
+% !!!!!!!!!!!!!!!! NB: NOT FINAL; SUBJECT TO CHANGE
+
+
+%%% Figures, tables, plots, and captions support
+% Images and captioning
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{justification=centering,font={small,sf}}
+\usepackage{subcaption}
+
+% Colour support
+\usepackage[dvipsnames]{xcolor}
+
+% Linting support for source code
+\usepackage[cache=false]{minted}
+\usemintedstyle{vs}     % vs code style - my preferred editor
+% Needs "--shell-escape" in the recipe, e.g. in the "~.latex.tools" in vscode.
+% To input in text, use the following (square brackets look best):
+% \inputminted[frame=single, linenos, python3]{#source-lang}{#code-dir}
+
+%%% Maths and other similar
+% Symbols backages 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{wasysym}
+
+% SI units - command \SI{value}{unit command}
+\usepackage{siunitx}
+% setup to display how I want it
+\sisetup{separate-uncertainty = true, multi-part-units = brackets}
+
+% Fractions as powers - command \sfrac
+\usepackage{xfrac}
+
+% Macros - the ones ususally used by people for the maths.
+% differential (needs upright, not slanted d)
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+% boldface vectors
+\let\OLDvec\vec
+\renewcommand{\vec}[1]{\boldsymbol{\mathrm{#1}}}
+% some constants - add per project with commmand \newcommand,
+% NB: to add upright letters, always use \mathrm{}
+
+
+%%% References
+% Bibliography
+%\usepackage{bibtex}	% old tech, still good for basic bibs
+% Natbib - easiest to combine with JabRef for bibliography management.
+\usepackage[square,sort,comma,numbers]{natbib}
+\setcitestyle{authoryear,open={(},close={)}}
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{3pt}
+  \setlength{\itemsep}{0pt plus 0.3ex}
+}
+% To include in text, use
+% \bibliographystyle{agsm} -- preferred view of bibs
+% \renewcommand{\bibname}{#new-name} -- rename the title of bibliography chapter
+% \bibliography{#name-of-bib} -- command to include in compiled file
+
+%%% Hyperlinks and finishing touches
+% Hyperlinks of all kinds, colours set up by my preference
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=RoyalBlue,
+	filecolor=magenta,
+	urlcolor=Salmon,
+	citecolor=RoyalBlue,
+}
+% more options on https://www.overleaf.com/learn/latex/hyperlinks
