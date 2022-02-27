@@ -1,0 +1,107 @@
+% Report of the SS16 - X-ray Diffraction mini-project
+% By Lyubomir Shoylev, 2022.
+\documentclass[11pt,a4paper,twoside,onecolumn]{article}
+\title{\textbf{SS16: X-ray diffraction and X-ray spectroscopy (mini-project)}}
+\author{Lyubomir Shoylev, shil5377}
+\date{\today}
+% My report package :)
+\usepackage{my-report}
+\usepackage[default-range=1-1]{lipsum}
+\newcommand{\reminder}[1]{\textcolor{red}{#1}}
+\newcommand{\rydberg}{\mathrm{R}}
+\newcommand{\Kalpha}{$\mathrm{K}_\alpha$}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    \lipsum
+\end{abstract}
+
+\section{Introduction}
+
+X-rays are an important experimental tool and have been for more than a 100 years now --- from the first Nobel Prize for their discovery, and still now. In this experiment, we will first verify Moseley's Law, and then use X-ray spectroscopy to analyse several samples of metal as well as coins from various places around the world.\reminder{finish this intro at the end.} %TODO
+
+Let us first write some of the theory we need to understand the phenomena at hand.
+
+% add only if really needed. %QUESTION
+% \subsection{X-ray Scattering}
+% We usually expose a sample to a beam of X-rays, so it is useful to think how they are scattered by the crystal structure. We can label the incident and diffracted X-rays by their wave vector $\vec{k}$ and $\vec{k'}$ respectively. Then, the transition rate is given by Fermi's golden rule:
+% \begin{equation}
+%     \Gamma \left( \vec{k}, \vec{k'} \right) = \frac{2 \pi}{\hbar} \left| \left\langle \vec{k} \middle| V \middle| \vec{k'} \right\rangle \right|^2 \delta\left(E_{\vec{k}} - E_{\vec{k'}}\right)
+% \end{equation}
+% where $V = V\left(\vec{r}\right)$ is the scattering potential of the crystal. A more detailed derivation can be found in the \reminder{reference of book by S. Simon}.
+
+\subsection{X-ray atomic spectra}
+
+The emission spectra of atoms is due to energy transition of shell electrons from a higher energy level to a lower energy level. We are interested in X-rays specifically, which are due to inner electron levels. These are shielded from the outer electron layers (that is, for sufficiently high $Z$) and are mostly unaffected by the chemical composition of the sample i.e. by the surrounding atoms. Therefore, we can take an energy level of an electron to be $E_n = -\frac{\rydberg\left(Z\right)}{n^2}$ where $\rydberg = \rydberg_\infty \left(Z - b\right)^2$ is the modified Rydberg constant for a given $Z$, $b$ is some parameter, and $R_\infty$ is the hydrogen Rydberg constant. Then, the energy of an emitted photon by a transition from level $n_\mathrm{i}$ to $n_\mathrm{f}$ is given by:
+\begin{equation}
+    \varepsilon = \rydberg\left(Z\right) \left(\frac{1}{n_\mathrm{f}^2} - \frac{1}{n_\mathrm{i}^2}\right).
+\end{equation}
+We can rewrite this at fixed $n_\mathrm{i}$, $n_\mathrm{f}$ (i.e. for a given line) as $\sqrt{\varepsilon} = m \times Z + C$ where $m$, $C$ are some constants. This relationship is known as `Moseley's Law'.
+
+\subsection{X-ray production}
+\reminder{Explain how x-rays are produced experimentally - both the x-ray peaks and the background bremsstrahlung}
+
+\section{Experiment}
+% If Laue gives sth, inlcude
+% The experiment features a molybdenum block X-ray source with an aperture, as well as film for the Laue photography and an X-ray spectroscope for the second part of the experiment.
+
+% \subsection{X-ray spectroscopy}
+Rather than use the \Kalpha lines of the molybdenum, we will use the remaining `bremsstrahlung' continuous spectrum to excite X-ray re-emission in the elements.
+
+Before we can make any claims about composition of our samples, we need to confirm the validity of Moseley's Law. Then, having confirmed it, we now know that by measuring the \Kalpha emission lines in the spectrum, we will know the composition.
+
+Our experiment consists of the following setup. First, we have an X-ray source with a molybdenum anode, which produces some characteristic \Kalpha x-rays that can be used for diffraction experiments (see the first experiment part of SS16 \reminder{put reference}) and some continuous bremsstrahlung (see chap 1.2 for explanation \reminder{put reference}). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit (omnidirectionally) mostly in the characteristic X-rays of $K$,$L$, and $M$ series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are:  \reminder{write out parameters}. This allows us to produce X-rays from samples with atomic numbers \reminder{calculate}. These are a large part of the most commonly used materials in practice, e.g. copper.
+
+% \subsection{Laue photography}
+% \reminder{UNDER CONSTRUCTION}
+
+\section{Result}
+We begin by verifying Moseley's Law. After that, we proceed with all of the samples that we can test --- first, some of the provided alloys, then we move on to cross-check the semiconductors from the first part of the experiment, and last we test the composition of \reminder{number} of coins that are available in the physics laboratory.
+
+\subsection{Moseley's Law}
+
+\subsection{Provided alloys and semiconductors}
+
+\subsection{International coins}
+
+\section{Analysis}
+\lipsum
+
+\section{Conclusions}
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+
+\lipsum
+\end{document}
