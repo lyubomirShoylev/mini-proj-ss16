@@ -25,8 +25,8 @@ X-rays are an important experimental tool and have been for more than a 100 year
 First, we examine some of the background theory behind X-rays and their production.
 
 \subsection{X-ray atomic spectra}
-The emission spectra of atoms is due to energy transition of shell electrons from a higher energy level to a lower energy level. We are interested in X-rays specifically, which are due to transitions in the inner electron levels. These are shielded from the outer electron layers (the higher $Z$, the better the shielding \reminder{CHECK}) and are mostly unaffected by the chemical structure of the sample i.e. by the surrounding atoms. Therefore, we can take an energy level of an electron to be $E_n = -\rydberg\left(Z\right) / n^2$ where $\rydberg = \rydberg_\infty \left(Z - b\right)^2$ is the modified Rydberg constant for a given $Z$, $b$ is some parameter, and $R_\infty$ is the hydrogen Rydberg constant. Then, the energy of an emitted photon by a transition from level $n_\mathrm{i}$ to $n_\mathrm{f}$ is given by:
-\begin{equation}
+The emission spectra of atoms is due to energy transition of shell electrons from a higher energy level to a lower energy level. We are interested in X-rays specifically, which are due to transitions in the inner electron levels. These are shielded from the outer electron layers (the higher $Z$, the better the shielding \reminder{CHECK}) and are mostly unaffected by the chemical structure of the sample i.e. by the surrounding atoms. Therefore, we can take an energy level of an electron to be $E_n = -\rydberg\left(Z\right) / n^2$ where $\rydberg = \rydberg_\infty \left(Z - b\right)^2$ is the modified Rydberg constant for a given $Z$, $b$ is some parameter, and $\rydberg_\infty$ is the hydrogen Rydberg constant. Then, the energy of an emitted photon by a transition from level $n_\mathrm{i}$ to $n_\mathrm{f}$ is given by:
+\begin{equation}\label{eqn:x-ray-energy}
     \varepsilon = \rydberg\left(Z\right) \left(\frac{1}{n_\mathrm{f}^2} - \frac{1}{n_\mathrm{i}^2}\right).
 \end{equation}
 We can rewrite this at fixed $n_\mathrm{i}$, $n_\mathrm{f}$ (i.e. for a given line) as $\sqrt{\varepsilon} = m \times Z + C$ where $m$, $C$ are some constants. This relationship is known as `Moseley's Law'.
@@ -34,7 +34,7 @@ We can rewrite this at fixed $n_\mathrm{i}$, $n_\mathrm{f}$ (i.e. for a given li
 The names of the energy levels of low-$n$ in X-ray notation is described in table \ref{tab:x-ray-notation}. Usually, the lines which are due to an initial absence in level K1 are referred to K-series; similarly for L-series and so on.
 \begin{table}[!htb]
     \centering
-    \begin{tabular}{@{}llllll@{}}
+    \begin{tabular}{@{}cccccc@{}}
     \toprule
     \multicolumn{4}{l}{Quantum numbers} & \multirow{2}{*}{Atomic notation} & \multirow{2}{*}{X-ray notation} \\ \cmidrule(r){1-4}
     n      & l      & s       & j       &                                  &                                 \\ \midrule
@@ -52,25 +52,28 @@ The names of the energy levels of low-$n$ in X-ray notation is described in tabl
     \label{tab:x-ray-notation}
 \end{table}
 
-\reminder{Describe the flourescence effect.}
-
 \subsection{X-ray production}
-In practice, we produce X-rays by bombarding a sample of some material with high energy electrons or X-rays which removes one of the inner shell electrons from the sample atom. This produces a vacancy in the shell. It is filled by some electron of a higher $n$ orbit (see \reminder{ref fig below here}), and the fall of potential energy of the electron is compensated by an emitted X-ray (ignoring higher order effects like the \emph{Auger effect}).
+In practice, we produce X-rays by bombarding a sample of some material with high energy electrons or X-rays which removes one of the inner shell electrons from the sample atom. This produces a vacancy in the shell. The vacancy is filled by some electron of a higher $n$ orbit (see \reminder{ref fig below here}), and the fall of potential energy of the electron is compensated by an emitted X-ray (ignoring higher order effects like the \emph{Auger effect}).
 \reminder{Include a picture to illustrate the effect - similar to lecture picture for Auger effect.}
-
-Suppose we use an X-ray source for the production of X-rays form our sample.
 
 Usually, small laboratory X-ray tubes use an electron source. Because of that, we observe a continuum of X-ray radiation imposed on top of the emission lines. This radiation is called \emph{bremsstrahlung} ("braking") radiation. Its source is the interaction between decelerating electrons and stationary charges in the sample lattice. The maximal energy of a bremsstrahlung continuum is limited by the energy of the decelerating particle. If electrons accelerated by a potential difference $V$, then the maximal energy is given by:
 \begin{equation}
     \varepsilon_\mathrm{max} = eV
 \end{equation}
 
-\subsection{Composition analysis}
-Explain how the fluorescence gives signal that can be used for spectral analysis of the sample in its composition. Derive equations:
+Suppose we use one such continuous X-ray source for the production of X-rays form our sample. We will take the K-series as an example. To produce a vacancy, need an X-ray of energy $\varepsilon_\mathrm{in} = - E_1 = \rydberg(Z)$. The resultant energy of the emitted X-ray will be given by \eqref{eqn:x-ray-energy}. Take for example the K-L transition. Its energy will therefore be (ignoring fine-structure):
 \begin{equation}
-   k = \frac{I_i}{I_j} = \frac{n_i}{n_j}, \text{$n_i$ is number density} \Rightarrow n_i = \frac{1}{1+k} n
+    \varepsilon_\mathrm{out} = \rydberg\left(Z\right) \left(1 - \frac{1}{2^2}\right).
 \end{equation}
-Can use this equations later.
+This is a process in which $\varepsilon_\mathrm{in} \neq \varepsilon_\mathrm{out}$, which is called \emph{flourescence}.
+
+\subsection{Composition analysis}
+As said above, the X-ray emission is relatively independent of the composition of the sample. We can use this fact to perform a composition analysis on a sample by exposing it to the continuous bremsstrahlung of a source; this will allow the different components to fluoresce. The signal will give us information not only \emph{which} elements are present (given that the source is high enough to allow fluorescence), but their relative contribution --- the intensity of the signal will depend only on the number density $n$. Suppose we measure the intensity of a two-metal alloy with the peaks in the K-L3 line as $I_\mathrm{a}$ and $I_\mathrm{b}$.
+This tells us that:
+\begin{equation}
+    \frac{I_\mathrm{a}}{I_\mathrm{b}} = \frac{n_\mathrm{a}}{n_\mathrm{b}},
+\end{equation}
+where $n_\mathrm{a}$ and $n_\mathrm{b}$ are the number densities of materials a and b. From that, we could easily calculate percentage compositions for number densities or mass densities ($\rho = n \times (\text{molar mass})$).
 
 \section{Experiment}
 % If Laue gives sth, include
