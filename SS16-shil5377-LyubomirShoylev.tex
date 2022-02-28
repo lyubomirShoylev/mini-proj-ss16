@@ -9,8 +9,8 @@
 \usepackage[default-range=1-1]{lipsum}
 \newcommand{\reminder}[1]{\textcolor{red}{#1}}
 \newcommand{\rydberg}{\mathrm{R}}
-\newcommand{\Kalpha}{$\mathrm{K}_\alpha$}
-\newcommand{\Lalpha}{$\mathrm{L}_\alpha$}
+\newcommand{\Kalpha}{$\mathrm{K}_\alpha$~}
+\newcommand{\Lalpha}{$\mathrm{L}_\alpha$~}
 \begin{document}
 \maketitle
 
@@ -52,7 +52,7 @@ The names of the energy levels of low-$n$ in X-ray notation is described in tabl
     \label{tab:x-ray-notation}
 \end{table}
 
-\subsection{X-ray production}
+\subsection{X-ray production}\label{subsec:x-ray-production}
 In practice, we produce X-rays by bombarding a sample of some material with high energy electrons or X-rays which removes one of the inner shell electrons from the sample atom. This produces a vacancy in the shell. The vacancy is filled by some electron of a higher $n$ orbit (see \reminder{ref fig below here}), and the fall of potential energy of the electron is compensated by an emitted X-ray (ignoring higher order effects like the \emph{Auger effect}).
 \reminder{Include a picture to illustrate the effect - similar to lecture picture for Auger effect.}
 
@@ -80,11 +80,7 @@ where $n_\mathrm{a}$ and $n_\mathrm{b}$ are the number densities of materials a 
 % The experiment features a molybdenum block X-ray source with an aperture, as well as film for the Laue photography and an X-ray spectroscope for the second part of the experiment.
 
 % \subsection{X-ray spectroscopy}
-Rather than use the \Kalpha lines of the molybdenum, we will use the remaining `bremsstrahlung' continuous spectrum to excite X-ray re-emission in the elements.
-
-Before we can make any claims about composition of our samples, we need to confirm the validity of Moseley's Law. Then, having confirmed it, we now know that by measuring the \Kalpha emission lines in the spectrum, we will know the composition.
-
-Our experiment consists of the following setup. First, we have an X-ray source with a molybdenum anode, which produces some characteristic \Kalpha X-rays that can be used for diffraction experiments (see the first experiment part of SS16 \reminder{put reference}) and some continuous bremsstrahlung (see chap 1.2 for explanation \reminder{put reference}). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit (omnidirectionally) mostly in the characteristic X-rays of $K$,$L$, and $M$ series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are:  \reminder{write out parameters}. This allows us to produce X-rays from samples with atomic numbers \reminder{calculate}. These are a large part of the most commonly used materials in practice, e.g. copper. \reminder{Picture}
+Our experiment consists of the following setup see \reminder{fig reference}. First, we have an X-ray source with a molybdenum anode, which produces some characteristic \Kalpha X-rays that can be used for diffraction experiments (see the first experiment part of SS16 \reminder{put reference}) and some continuous bremsstrahlung (see section \ref{subsec:x-ray-production} for more details). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit mostly in the characteristic X-rays of K,L, and M series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are: tube voltage $V = \SI{35}{kV}$, emission current \SI{1}{A}, exposure time $t=$\reminder{ask Darryl}. This allows us to produce X-rays from samples with atomic numbers \reminder{calculate}. These are a large part of the most commonly used materials in practice, e.g. copper. \reminder{Picture}
 
 The first part of the experiment will test the validity of Moseley's Law with the help of several samples of known substances.
 
@@ -94,7 +90,7 @@ The second part and third part of the experiment will utilise our knowledge abou
 % \reminder{UNDER CONSTRUCTION}
 
 \section{Result and Analysis}
-Before we can do any work that has to do with determining energies or using energy values from a database, need to set the scaling of the measurement apparatus. We will do so with two of the labelled provided samples - for Iron and Silver. These cover a wide range of values in the bremsstrahlung spectrum, so they are a good way to set the scaling. 
+Before we can do any work that has to do with determining energies or referring to energy values from a database, need to set the scaling of the measurement apparatus. We will do so with two of the labelled provided samples - for Fe and Ag. These cover a wide range of values in the bremsstrahlung spectrum, so they are a good way to set the scaling. The particular lines which we use to calibrate are the Fe \Kalpha with $E_\mathrm{Fe} = \SI{6.40}{keV}$ and the Ag \Kalpha with $E_\mathrm{Ag} = \SI{22.17}{keV}$.
 
 \reminder{put a picture of the settings, maybe screenshot?}
 
