@@ -36,7 +36,7 @@ We can rewrite this at fixed $n_\mathrm{i}$, $n_\mathrm{f}$ (i.e. for a given li
 \end{equation}  where $m$, $C$ are some constants. This relationship is known as `Moseley's Law'.
 
 The name convention of the energy levels of low-$n$ in X-ray notation is described in Table \ref{tab:x-ray-notation}. Usually, the lines which are due to a transition from a higher energy level to a K1 level are referred to as K-series; similarly for L-series and so on.
-\begin{table}[!htb]
+\begin{table}[!htbp]
     \centering
     \begin{tabular}{@{}cccccc@{}}
     \toprule
@@ -59,7 +59,7 @@ The name convention of the energy levels of low-$n$ in X-ray notation is describ
 \subsection{X-ray production}\label{subsec:x-ray-production}
 In practice, we produce X-rays by bombarding a sample of some material with high energy electrons or X-rays which removes one of the inner shell electrons from the sample atom. This produces a vacancy in the shell. The vacancy is filled by some electron of a higher $n$ orbit (see Figure \ref{fig:emission-diagram}), and the fall of potential energy of the electron is compensated by an emitted X-ray (ignoring higher order effects like the \emph{Auger effect}).
 
-\begin{figure}[!htb]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\textwidth]{img/emission-diagram.png}
     \caption{Schematic of the emission process for a K-L3 transition.}\label{fig:emission-diagram}
@@ -85,9 +85,9 @@ This tells us that:
 where $n_\mathrm{a}$ and $n_\mathrm{b}$ are the number densities of materials a and b. From that, we could easily calculate percentage compositions for number densities or mass densities ($\rho = n \times (\text{molar mass})$).
 
 \section{Experiment}\label{sec:experiment}
-Our experiment consists of the setup presented in Figure \ref{fig:experim-setup}. First, we have an X-ray source with a molybdenum anode, which produces some characteristic \Kalpha X-rays that can be used for diffraction experiments (see the first experiment part of SS16 \reminder{put reference}) and some continuous bremsstrahlung (see Section \ref{subsec:x-ray-production} for more details). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit mostly in the characteristic X-rays of K,L, and M series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are: tube voltage $V = \SI{35}{kV}$, emission current \SI{1}{A}, exposure time $t=$\reminder{ask Darryl}. This, according to \eqref{eqn:bremss-energy-max} and \eqref{eqn:Kalpha-energy-out}, allows us to produce, for example, \Kalpha X-rays with energy up to \SI{26.25}{keV} from samples with atomic numbers up to at least $50$, ignoring contribution of $b$.
+Our experiment consists of the setup presented in Figure \ref{fig:experim-setup}. First, we have an X-ray source with a molybdenum anode, which produces some characteristic \Kalpha X-rays that can be used for diffraction experiments (see the first experiment part of SS16 \reminder{put reference}) and some continuous bremsstrahlung (see Section \ref{subsec:x-ray-production} for more details). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit mostly in the characteristic X-rays of K,L, and M series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are: tube voltage $V = \qty{35}{kV}$, emission current \qty{1}{A}, exposure time $t=$\reminder{ask Darryl}. This, according to \eqref{eqn:bremss-energy-max} and \eqref{eqn:Kalpha-energy-out}, allows us to produce, for example, \Kalpha X-rays with energy up to \qty{26.25}{keV} from samples with atomic numbers up to at least $50$, ignoring contribution of $b$.
 
-\begin{figure}[!htb]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\textwidth]{img/experim-setup.png}
     \caption{Diagram of the experimental setup. More info in the text of Section \ref{sec:experiment}.}\label{fig:experim-setup}
@@ -95,9 +95,9 @@ Our experiment consists of the setup presented in Figure \ref{fig:experim-setup}
 
 To operate the apparatus and extract data, we use the software provided by the labs \emph{CASSY Lab 2}. The program has a built in database for the X-ray emission lines of most elements. It also allows for calculating a peak centre and fitting gaussian profiles with specified energy to find the intensity of emission lines.
 
-Before we can do any work that has to do with determining energies or referring to energy values from a database, need to set the scaling of the measurement apparatus. We will do so with two of the labelled provided samples - for Fe and Ag. These cover a wide range of values in the bremsstrahlung spectrum, so they are a good way to set the scaling. The particular lines which we use to calibrate are the Fe \Kalpha with $E_\mathrm{Fe} = \SI{6.40}{keV}$ and the Ag \Kalpha with $E_\mathrm{Ag} = \SI{22.17}{keV}$.
+Before we can do any work that has to do with determining energies or referring to energy values from a database, need to set the scaling of the measurement apparatus. We will do so with two of the labelled provided samples - for Fe and Ag. These cover a wide range of values in the bremsstrahlung spectrum, so they are a good way to set the scaling. The particular lines which we use to calibrate are the Fe \Kalpha with $E_\mathrm{Fe} = \qty{6.40}{keV}$ and the Ag \Kalpha with $E_\mathrm{Ag} = \qty{22.17}{keV}$. We also have to note the observational lower and upper limits, respectively \qtyrange{2}{4}{keV} and $\approx \qty{35}{keV}$.
 
-\begin{figure}[!htb]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{img/calib.png}
     \caption{These are the Fe (black) and Ag (red) spectra used for calibration.}\label{fig:calibration}
@@ -119,10 +119,11 @@ We expect to see a straight line fit for the two groups of lines. The scaling co
 \begin{equation}
     m_\mathrm{K} \propto \left(1 - \frac{1}{2^2}\right)^{\sfrac{1}{2}} = \sqrt{\frac{3}{4}},\quad m_\mathrm{L} \propto \left(\frac{1}{2^2} - \frac{1}{3^2}\right)^{\sfrac{1}{2}} = \sqrt{\frac{5}{36}} \quad \Rightarrow \frac{m_\mathrm{K}}{m_\mathrm{L}} = \sqrt{\frac{27}{5}}
 \end{equation}
-\begin{figure}[!htb]
+
+\begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/moseleys.png}
-    \caption{sqrt(energy) vs Z number for given samples: \reminder{list samples. produce better final Figures}.}\label{fig:moseleys}
+    \includegraphics[width=0.7\textwidth]{img/moseleys.png}
+    \caption{sqrt(energy) vs Z number for given samples: \reminder{list samples. produce better final figures}.}\label{fig:moseleys}
 \end{figure}
 
 
@@ -137,10 +138,23 @@ Also, can calculate ratio from given values:
 Agreement is not so good, but we have not taken into account many other effects like change of energy due to being in a state $l \neq 0$ etc. So, not too bad. \reminder{can expand a bit maybe}.
 
 \subsection{Provided alloys and semiconductors}
-Now, can move to more interesting analysis. We will use fluorescence to determine the composition of the semiconductors from the non-MP part and of some unlabelled samples that are provided in the physics lab.
+Now, can move to the analysis of samples. We will use fluorescence to determine the composition of the semiconductors from the non-MP part and of some unlabelled samples that are provided in the physics lab.
 
 \subsubsection{Semiconductors}
 The semiconductors are part of the non-MP experiment, where we determined their structure by determination of the lattice constant. Here, we provide an independent confirmation of our previous results. 
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/spect-semiconductors.png}
+    \caption{Fluorescence spectra of the Fe, Ag calibration and semiconductors labelled as X2 and Y2 in sample boxes provided. We see that X2 and Y2 show traces of In, and Y2 shows additionally traces of Sb. \reminder{prob should go to appendix.}}
+    \label{fig:spect-semiconductors}
+\end{figure}
+
+We see that semiconductor Y2 shows traces of In and Sb, a group III and V elements respectively. This is a very common structure for semiconductors, so this is reassuring (\reminder{expand?}). In addition, this confirms our result from the first part of the practical, where we arrived at the conclusion that the semiconductor is an InSb via lattice diffraction. We can measure intensities of the \Kalpha lines for both \reminder{appendix data}, and calculate the ratios:
+\begin{equation}
+    \frac{n_\mathrm{In}}{n_\mathrm{Sb}} = \frac{I_\mathrm{In}}{I_\mathrm{Sb}} = \frac{122.5}{42.8} \approx 2.86 \quad \Rightarrow \quad p_\mathrm{In} = \frac{n_\mathrm{In}}{n_\mathrm{In}+n_\mathrm{Sb}} = 74 \% \quad p_\mathrm{Sb} = 26 \%
+\end{equation}
+
+For sample X2, we see a trace of In only. Checking with our result from the diffraction analysis, we see that the dopant is P. The characteristic X-rays of P in K-series (most energetic ones) have energies around \qty{2}{keV}, which is around our detection limit of about \qtyrange{2}{4}{keV}. This highlights one of the shortcomings of our method: it is limited in detecting only those elements, which have X-ray emission lines in the range of the bremsstrahlung and the range of operation of the detector.
 
 \subsubsection{Unlabelled alloys}
 The lab has two boxes of unlabelled metallic samples - alloys of different metals. We can determine their composition and ratios by using \reminder{ref 1.3}.
@@ -151,7 +165,7 @@ This is our final task. The lab has a box of various coins from around the world
 The results can be summarised in Table \ref{tab:coin-measured}.
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
-\begin{table}[]
+\begin{table}[!htbp]
     \centering
     \begin{tabular}{@{}lllllll@{}}
     \toprule
@@ -197,5 +211,7 @@ We can see that almost all coins are made of an alloy featuring Ni, Ci, or Zn. \
 \section{Energy spectra plots}
 Add more energy spectra plots here, which do not fit/not vital for main text.
 
+\section{Extracted intensity data}
+Add data here as tables, refer to it when needed.
 
 \end{document}
