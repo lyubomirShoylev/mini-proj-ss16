@@ -10,6 +10,7 @@
 \newcommand{\reminder}[1]{\textcolor{red}{#1}}
 \newcommand{\rydberg}{\mathrm{R}}
 \newcommand{\Kalpha}{$\mathrm{K}_\alpha$~}
+\newcommand{\Kbeta}{$\mathrm{K}_\beta$~}
 \newcommand{\Lalpha}{$\mathrm{L}_\alpha$~}
 
 \begin{document}
@@ -26,7 +27,7 @@ X-rays are an important experimental tool and have been for more than a 100 year
 First, we introduce some of the background theory behind X-rays and their production.
 
 \subsection{X-ray atomic spectra}
-The emission spectra of atoms is due to energy transition of shell electrons from a higher energy level to a lower energy level. We are interested in X-rays specifically, which are due to transitions in the inner electron levels of high-$Z$ atoms. These are shielded from the outer electron layers (the higher $Z$, the better the shielding \reminder{CHECK}) and are mostly unaffected by the chemical structure of the sample i.e. by the surrounding atoms. Therefore, we can take an energy level of an electron to be $E_n = -\rydberg\left(Z\right) / n^2$ where $\rydberg = \rydberg_\infty \left(Z - b\right)^2$ is the modified Rydberg constant for a given $Z$, $b$ is some parameter, and $\rydberg_\infty$ is the hydrogen Rydberg constant. Then, the energy of an emitted photon by a transition from level $n_\mathrm{i}$ to $n_\mathrm{f}$ is given by:
+The emission spectra of atoms is due to energy transition of shell electrons from a higher energy level to a lower energy level. We are interested in X-rays specifically, which are due to transitions in the inner electron levels of high-$Z$ atoms. These are shielded from the outer electron layers (the higher $Z$, the better the shielding \reminder{CHECK}) and are mostly unaffected by the chemical structure of the sample i.e. by the surrounding atoms. Therefore, we can take an energy level of an electron to be $E_n = -\rydberg\left(Z\right) / n^2$ where $\rydberg \left(Z\right)= \rydberg_\infty \left(Z - b\right)^2$ is the modified Rydberg constant for a given $Z$, $b$ is some parameter depending on atom, and $\rydberg_\infty$ is the hydrogen Rydberg constant. Then, the energy of an emitted photon by a transition from level $n_\mathrm{i}$ to $n_\mathrm{f}$ is given by:
 \begin{equation}\label{eqn:x-ray-energy}
     \varepsilon = \rydberg\left(Z\right) \left(\frac{1}{n_\mathrm{f}^2} - \frac{1}{n_\mathrm{i}^2}\right).
 \end{equation}
@@ -52,7 +53,7 @@ The name convention of the energy levels of low-$n$ in X-ray notation is describ
     3      & 2      & 1/2     & 3/2     & 3D3/2                            & M4                              \\
     3      & 2      & 1/2     & 5/2     & 3D5/2                            & M5                              \\ \bottomrule
     \end{tabular}
-    \caption{Table describing the connection between X-ray notation and Atomic notation. \reminder{cite source. Maybe add the old Siegbahn notation - used later in text? can do that in the text rather than table.}}
+    \caption{Table describing the connection between X-ray notation and Atomic notation. \reminder{cite source, fix notation upper/lower index. Maybe add the old Siegbahn notation - used later in text?}}
     \label{tab:x-ray-notation}
 \end{table}
 
@@ -67,10 +68,10 @@ In practice, we produce X-rays by bombarding a sample of some material with high
 
 Usually, small laboratory X-ray tubes use an electron source. Because of that, we observe a continuum of X-ray radiation imposed on top of the emission lines. This radiation is called \emph{bremsstrahlung} (``braking") radiation. Its source is the interaction between decelerating electrons and stationary charges in the sample lattice. The maximal energy of a bremsstrahlung continuum is limited by the energy of the decelerating particle. If electrons accelerated by a potential difference $V$, then the maximal energy is given by: 
 \begin{equation}\label{eqn:bremss-energy-max}
-    \varepsilon_\mathrm{max} = eV
+    \varepsilon_\mathrm{max} = eV.
 \end{equation}
 
-Suppose we use one such continuous X-ray source for the production of X-rays form a sample. We will take the K-series as an example. To produce a vacancy, need an X-ray of energy $\varepsilon_\mathrm{in} = - E_1 = \rydberg(Z)$. The resultant energy of the emitted X-ray will be given by \eqref{eqn:x-ray-energy}. Take for example the K-L transition. Its energy will therefore be (ignoring fine-structure):
+Suppose we use one such continuous X-ray source for the production of X-rays form a sample. We will take the K-series as an example. To produce a vacancy, need an X-ray of energy $\varepsilon_\mathrm{in} = - E_1 = \rydberg(Z)$, which will be provided by a collision with an electron in this case with maximum energy $\varepsilon_\mathrm{max}$. The resultant energy of the emitted X-ray will be given by \eqref{eqn:x-ray-energy}. Take for example the K-L transition. Its energy will therefore be (ignoring fine-structure):
 \begin{equation}\label{eqn:Kalpha-energy-out}
     \varepsilon_\mathrm{out} = \rydberg\left(Z\right) \left(1 - \frac{1}{2^2}\right).
 \end{equation}
@@ -117,16 +118,13 @@ We measure the line energy values from the labelled samples. These are mainly in
 \end{itemize}
 We expect to see a straight line fit for the two groups of lines. The scaling constant $m$ depends purely on the line we are observing, i.e. on the $n_\mathrm{i}, n_\mathrm{f}$ for the given line. We can predict the ratio of the constants for the two series. Following \eqref{eqn:x-ray-energy} and Moseley's law, we get:
 \begin{equation}
-    m_\mathrm{K} \propto \left(1 - \frac{1}{2^2}\right)^{\sfrac{1}{2}} = \sqrt{\frac{3}{4}},\quad m_\mathrm{L} \propto \left(\frac{1}{2^2} - \frac{1}{3^2}\right)^{\sfrac{1}{2}} = \sqrt{\frac{5}{36}} \quad \Rightarrow \frac{m_\mathrm{K}}{m_\mathrm{L}} = \sqrt{\frac{27}{5}}
+    m_\mathrm{K} \propto \left(1 - \frac{1}{2^2}\right)^{\sfrac{1}{2}} = \sqrt{\frac{3}{4}},\quad m_\mathrm{L} \propto \left(\frac{1}{2^2} - \frac{1}{3^2}\right)^{\sfrac{1}{2}} = \sqrt{\frac{5}{36}} \quad \Rightarrow \frac{m_\mathrm{K}}{m_\mathrm{L}} = \sqrt{\frac{27}{5}}.
 \end{equation}
-
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{img/moseleys.png}
     \caption{sqrt(energy) vs Z number for given samples: \reminder{list samples. produce better final figures}.}\label{fig:moseleys}
 \end{figure}
-
-
 Results presented in Figure \ref{fig:moseleys}.
 
 We see that these both follow our expectations - have good fits to the model. We can deduce that our description of X-ray emission works sufficiently well for our purposes (given experimental accuracy etc), so we can proceed to use X-ray K and L series lines as a signature of a given element in spectral analysis.
@@ -149,22 +147,64 @@ The semiconductors are part of the non-MP experiment, where we determined their 
     \label{fig:spect-semiconductors}
 \end{figure}
 
-We see that semiconductor Y2 shows traces of In and Sb, a group III and V elements respectively. This is a very common structure for semiconductors, so this is reassuring (\reminder{expand?}). In addition, this confirms our result from the first part of the practical, where we arrived at the conclusion that the semiconductor is an InSb via lattice diffraction. We can measure intensities of the \Kalpha lines for both \reminder{appendix data}, and calculate the ratios:
+We see that semiconductor Y2 shows traces of In and Sb, a group III and V elements respectively. This is a very common structure for semiconductors, so this is reassuring (\reminder{expand?}). In addition, this confirms our result from the first part of the practical, where we arrived at the conclusion that the semiconductor is an InSb via lattice diffraction. We can measure intensities of the \Kalpha lines for both, and calculate the ratios:
 \begin{equation}
     \frac{n_\mathrm{In}}{n_\mathrm{Sb}} = \frac{I_\mathrm{In}}{I_\mathrm{Sb}} = \frac{122.5}{42.8} \approx 2.86 \quad \Rightarrow \quad p_\mathrm{In} = \frac{n_\mathrm{In}}{n_\mathrm{In}+n_\mathrm{Sb}} = 74 \% \quad p_\mathrm{Sb} = 26 \%
 \end{equation}
 
-For sample X2, we see a trace of In only. Checking with our result from the diffraction analysis, we see that the dopant is P. The characteristic X-rays of P in K-series (most energetic ones) have energies around \qty{2}{keV}, which is around our detection limit of about \qtyrange{2}{4}{keV}. This highlights one of the shortcomings of our method: it is limited in detecting only those elements, which have X-ray emission lines in the range of the bremsstrahlung and the range of operation of the detector.
+For sample X2, we see a trace of In only. Checking with our result from the diffraction analysis, we see that the dopant is P (phosphorus). The characteristic X-rays of P in K-series (most energetic ones) have energies around \qty{2}{keV}, which is around our detection limit of about \qtyrange{2}{4}{keV}. This highlights one of the shortcomings of our method: it is limited in detecting only those elements, which have X-ray emission lines in the range of the bremsstrahlung and the range of operation of the detector.
 
-\subsubsection{Unlabelled alloys}
-The lab has two boxes of unlabelled metallic samples - alloys of different metals. We can determine their composition and ratios by using \reminder{ref 1.3}.
+\subsubsection{Unlabelled alloys}\label{subsubsec:unlabelled-alloys}
+The lab has two boxes of unlabelled metallic samples - alloys of different metals. We can determine their composition and ratios by using \reminder{sec 1.3}. Result is presented in Table \ref{tab:unlabelled-alloys}.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}llllllll@{}}
+\toprule
+sample & element  & line   & intensity & Kalph/Kbet  & k        & prop     & by mass     \\ \midrule
+b1-1   & Cr       & Kalpha & 381.9     & 5.550872093 & 0.422877 & 0.297198 & 0.277555397 \\
+b1-1   & Cr       & Kbeta  & 68.8      &             &          &          &             \\
+b1-1   & Fe       & Kalpha & 903.1     & 4.138863428 &          & 0.702802 & 0.722444603 \\
+b1-1   & Fe       & Kbeta  & 218.2     &             &          &          &             \\ \midrule
+b1-2   & Cu       & Kalpha & 2110.2    & 6.136086072 & 1.783921 & 0.640794 & 0.691408371 \\
+b1-2   & Cu       & Kbeta  & 343.9     &             &          &          &             \\
+b1-2   & Zn       & Kalpha & 1182.9    & 17.09393064 &          & 0.359206 & 0.308591629 \\
+b1-2   & Zn       & Kbeta  & 69.2      &             &          &          &             \\ \midrule
+b1-3   & Cu       & Kalpha & 3947.9    & 14.32994555 & 1.265515 & 0.558599 & 0.613815022 \\
+b1-3   & Cu       & Kbeta  & 275.5     &             &          &          &             \\
+b1-3   & Zn       & Kalpha & 3119.6    & 16.51455797 &          & 0.441401 & 0.386184978 \\
+b1-3   & Zn       & Kbeta  & 188.9     &             &          &          &             \\ \midrule
+b2-a   & unusable &        &           &             &          &          &             \\ \midrule
+b2-b   & unusable &        &           &             &          &          &             \\ \midrule
+b2-c   & Fe       & Kalpha & 1351.9    & 3.736594804 & 2.062081 & 0.673425 & 0.694639809 \\
+b2-c   & Fe       & Kbeta  & 361.8     &             &          &          &             \\
+b2-c   & Zn       & Kalpha & 655.6     & 8.569934641 &          & 0.326575 & 0.305360191 \\
+b2-c   & Zn       & Kbeta  & 76.5      &             &          &          &             \\ \midrule
+b2-d   & Fe       & Kalpha & 1443.6    & 3.921760391 & 3.421664 & 0.773841 & 0.790561437 \\
+b2-d   & Fe       & Kbeta  & 368.1     &             &          &          &             \\
+b2-d   & Zn       & Kalpha & 421.9     & 9.743648961 &          & 0.226159 & 0.209438563 \\
+b2-d   & Zn       & Kbeta  & 43.3      &             &          &          &             \\ \midrule
+b2-e   & unusable &        &           &             &          &          &             \\ \midrule
+b2-f   & Fe       & Kalpha & 1443.3    & 3.885060565 & 2.559496 & 0.719061 & 0.738463241 \\
+b2-f   & Fe       & Kbeta  & 371.5     &             &          &          &             \\
+b2-f   & Zn       & Kalpha & 563.9     & 9.367109635 &          & 0.280939 & 0.261536759 \\
+b2-f   & Zn       & Kbeta  & 60.2      &             &          &          &             \\ \bottomrule
+\end{tabular}
+\caption{Table of the fitted intensities in alloy samples. Some of the measurements made had signal comparable with the background due to a human error during data acquisition; included here for completeness. \reminder{add a column with line energy, include siunitx for number formatting, prob delete the unusable ones}}
+\label{tab:unlabelled-alloys}
+\end{table}
+
+We can first check for consistency of the fits by looking at the rations of intensities for \Kalpha and \Kbeta, which should be approximately the same for al samples as it depends on the structure of the individual atom. Samples b2-c,d,f have close values for both the Fe and Zn lines. Since these two elements do not overlap in the spectrum (\reminder{ref appendix here}), these ratios should be close to the true ratio. We would expect to observe similar ratios in the other samples for Fe and Zn.
+
+For sample b1-1, the Fe ratio is a little above 4, so we can say that the fit was pretty good. For samples b1-2,3, the Zn ratio is twice the one measured above. The fit here is pretty poor since Cu and Zn are respectively $Z=29$ and $Z=30$. Their spectra overlap by a lot --- the \Kalpha of Zn is between \Kalpha and \Kbeta of Cu. This, combined with the low resolution of our detector, makes it pretty difficult to fit here. Nevertheless, the \Kalpha lines are much stronger, so we can still try to extract the composition of the alloys (especially since they are close here).
+
+Alloy composition is usually presented by mass in practical applications.These results are in the last column of Table \ref{tab:unlabelled-alloys}.
 
 \subsection{International coins}
-This is our final task. The lab has a box of various coins from around the world, the content of which we can again interpret using our fluorescence method.
+This is our final task. The lab has a box of various coins from around the world, the content of which we can again interpret using our fluorescence method, similar to the analysis in Section \ref{subsubsec:unlabelled-alloys}.
 
 The results can be summarised in Table \ref{tab:coin-measured}.
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
+
 \begin{table}[!htbp]
     \centering
     \begin{tabular}{@{}lllllll@{}}
@@ -198,8 +238,7 @@ The results can be summarised in Table \ref{tab:coin-measured}.
     \end{tabular}
     \caption{Table of measured values.}
     \label{tab:coin-measured}
-    \end{table}
-We can see that almost all coins are made of an alloy featuring Ni, Ci, or Zn. \reminder{discuss why}
+\end{table}
 
 \reminder{maybe additional analysis based on raw material cost of coins + a deeper inquiry?}
 
