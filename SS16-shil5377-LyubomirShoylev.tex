@@ -71,7 +71,7 @@ Usually, small laboratory X-ray tubes use an electron source. Because of that, w
     \varepsilon_\mathrm{max} = eV.
 \end{equation}
 
-Suppose we use one such continuous X-ray source for the production of X-rays form a sample. We will take the K-series as an example. To produce a vacancy, need an X-ray of energy $\varepsilon_\mathrm{in} = - E_1 = \rydberg(Z)$, which will be provided by a collision with an electron in this case with maximum energy $\varepsilon_\mathrm{max}$. The resultant energy of the emitted X-ray will be given by \eqref{eqn:x-ray-energy}. Take for example the K-L transition. Its energy will therefore be (ignoring fine-structure):
+Suppose we use one such continuous X-ray source for the production of X-rays form a sample. We will take the K-series as an example. To produce a vacancy, need an X-ray of energy $\varepsilon_\mathrm{in} = - E_1 = \rydberg(Z)$, which will be provided by a collision with an electron with maximum energy $\varepsilon_\mathrm{max}$ in the case of the X-ray source. The resultant energy of the emitted X-ray will be given by \eqref{eqn:x-ray-energy}. Take for example the K-L transition. Its energy will therefore be (ignoring fine-structure):
 \begin{equation}\label{eqn:Kalpha-energy-out}
     \varepsilon_\mathrm{out} = \rydberg\left(Z\right) \left(1 - \frac{1}{2^2}\right).
 \end{equation}
@@ -201,9 +201,7 @@ For sample b1-1, the Fe ratio is a little above 4, so we can say that the fit wa
 Alloy composition is usually presented by mass in practical applications.These results are in the last column of Table \ref{tab:unlabelled-alloys}.
 
 \subsection{International coins}
-This is our final task. The lab has a box of various coins from around the world, the content of which we can again interpret using our fluorescence method, similar to the analysis in Section \ref{subsubsec:unlabelled-alloys}.
-
-The results can be summarised in Table \ref{tab:coin-measured}.
+The lab has a box of various coins from around the world, the content of which we can again interpret using our fluorescence method, similar to the analysis in Section \ref{subsubsec:unlabelled-alloys}.
 
 \begin{table}[!htbp]
     \centering
@@ -236,11 +234,32 @@ The results can be summarised in Table \ref{tab:coin-measured}.
     26 & Canada         & 25c            & yes & yes & no  & Fe?   \\
     27 & Brazil         & 5 centavos     & no  & yes & no  & no    \\ \bottomrule
     \end{tabular}
-    \caption{Table of measured values.}
+    \caption{Table of metal composition for a selection of international coins.}
     \label{tab:coin-measured}
 \end{table}
 
-\reminder{maybe additional analysis based on raw material cost of coins + a deeper inquiry?}
+When looking at plots of the spectra, we see that almost all coins are made predominantly out of Ni, Cu, and Zn with $Z=\numrange{28}{30}$ respectively. The spectra are overlapping, so similarly to the b1-2,3 samples in Section \ref{subsubsec:unlabelled-alloys}, we cannot really fit the samples well for all $\alpha, \beta$ lines. Nevertheless, we can still determine if one of the three elements is present. Additionally, we note down any additional features of the spectra that are of interest.The results can be summarised in Table \ref{tab:coin-measured}. Two exceptions to the general rule are obvious - the 1 Yen and 25c canadian coins. We can compare our results with the information from the institutions that issue these coins.
+
+The official information lists the 1 Yen coin to be maid of 100\% aluminium \reminder{cite}. The \Kalpha line for aluminum is at \qty{1.49}{keV}, out of the range of our setup. This is the reason we do not see any signal in our spectrum.
+
+The official information informs us that the 25c canadian coin is a 94\% steel core with 6\% Ni-Cu plating. When we look at the spectrum, however, the strength of the Fe line is much less than the Ni and Cu. This is due to the fact that the X-rays do not penetrate deep into the coin. If a thick enough coating is applied, we could even fully shield the steel core. In fact, several coins on our list follow this pattern, e.g. the new 2p and 10p coins.
+
+\subsubsection{Why Ni,Cu,Zn?}
+One obvious question that comes up form these results is why are alloys of Ni, Cu, and Zn the choice? There are several properties of these alloys that make them preferable for coin minting.
+
+Historically, coins were most often made from gold, silver, and copper, with their value determined by the value of the metal in the coin. With the inflation of prices, however, the metal in the coins gradually became more expensive than their monetary value. There was a need for new materials to be implemented while keeping many of the familiar and useful properties of old coins.
+
+Firstly, there are visual consideration of the coins. Ni-Cu and Cu-Zn alloys can have varying colours depending on the ratio of elements used. Ni-Cu are usually silver in appearance, while Cu-Zn alloys are usually golden in appearance, with small amounts of other additives sometimes present, like in the case of the \emph{nordic gold} alloy used for the make of the 50 euro cent coin.
+
+Secondly, the cost considerations required some inexpensive materials to be used so that mass production is practical and coins are not produced at a loss. Due to inflation, this has led to the change of coin composition throughout the years. One example is the UK 10p coin. While the old coin was made from pure Ni25Cu75, the new coin is made from 94\% steel clad in 6\% Ni. The method of implementing a cheaper core while using Ni,Cu,Zn for an outer layer also keeps the appearance the same or similar, which is one of the reasons for the approach.
+
+Thirdly, the minting of the coins includes making the alloys and producing the coins with intricate detailing on their surfaces. The alloying of the specific ratios required by the specifications can be a difficult task outside of the specialised large scale industrial complexes. The three metals also allow for the detailing on different design coins --- their alloys have been used to produce detailing by artisans for centuries (millennia?). Both of these specifics make the production of good counterfeit coins more difficult, which brings more security to the currency.
+
+Finally, these alloys are very practical for everyday use. Coins, in their daily use, are exposed to the elements and physical wear. These alloys are very resistant to rusting (although Ni-Cu are often subject to formation of \emph{patina}) and have high durability against physical stresses like bending, stretching etc. This is another reason for the cladding method --- this gives them resistance against the elements and the physical toughness also helps preserve the detailing on the surface.
+%sprinkle some citations pls.
+
+\subsubsection{Cost-based analysis of coins.}
+\reminder{This is a potential direction to investigate. Main idea --- calculate the ``value'' of a coin via its weight+official composition to see if anything interesting appears (coins worth more than their value, similar value for all coins etc.)
 
 \section{Conclusions}
 \lipsum[1-5]
@@ -252,5 +271,40 @@ Add more energy spectra plots here, which do not fit/not vital for main text.
 
 \section{Extracted intensity data}
 Add data here as tables, refer to it when needed.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{@{}llllllll@{}}
+    \toprule
+    No in   measur & Country        & Denomination   & Ni,\%    & Cu, \%   & Zn, \% & Other, \%            & Weight, g  \\ \midrule
+    3              & United Kingdom & 50p old        & 25       & 75       & 0      & 0                    &            \\
+    4              & United Kingdom & 50p new        & 25       & 75       & 0      & 0                    &            \\
+    5              & United Kingdom & 20p new        & 16       & 84       & 0      & 0                    &            \\
+    6              & United Kingdom & 10p old        & 25       & 75       & 0      & 0                    &            \\
+    7              & United Kingdom & 10p new        & 6        & 0        & 0      & mild Steel - 94      &            \\
+    8              & United Kingdom & 2p new         & 0        & 6        & 0      & mild Steel - 94      &            \\
+    9              & Singapore      & 1 dollar old   & 2        & 92       & 0      & Al - 6               & 8.05+-0.20 \\
+    10             & Singapore      & 50c old        & 25       & 75       & 0      & 0                    & 8.56+-0.20 \\
+    11             & Singapore      & 20c new        & ?        & 0        & 0      & steel - ?            & 6.56+-0.28 \\
+    12             & Bulgaria       & 50 stotinki    & 10       &          &        & 0                    & 5          \\
+    13             & Bulgaria       & 5 stotinki     &          &          &        & steel - ?            & 3.5        \\
+    14             & European Union & 50c            & 0        & 89       & 5      & Al - 5, Sn -1        & 7.8        \\
+    15             & European Union & 2c old         &          & x        &        & 0                    & 3.06       \\
+    16             & European Union & 2c new         &          & x        &        & 0                    & 3.06       \\
+    17             & Romania        & 10 bani        & ?        & 0        & 0      & steel - ?            & 4          \\
+    18             & Norway         & 1 krone        & 25       & 75       & 0      & 0                    & 4.35       \\
+    19             & Switzerland    & 20 centim      & 25       & 75       & 0      & 0                    & 4          \\
+    20             & Sweden         & 1 krona        & 25       & 75       & 0      & 0                    &            \\
+    21             & Japan          & 1 yen          & 0        & 0        & 0      & al-100               & 1          \\
+    22             & Hong Kong      & 10c            &          &          &        & 0                    & 1.85       \\
+    23             & Uganda         & 200 schillings & $\sim$30 & $\sim$70 & 0      & 0                    & 8.5        \\
+    24             & USA            & 25c            &          &          &        & 0                    &            \\
+    25             & USA            & 1c             & 0        & 2.5      & 97.5   & 0                    & 2.5        \\
+    26             & Canada         & 25c            & 2.2      & 3.8      & 0      & Steel AISI 1006 - 94 & 4.4        \\
+    27             & Brazil         & 5 centavos     & 0        &          &        & 0                    &            \\ \bottomrule
+    \end{tabular}
+    \caption{Table of official info about the international coins. Notable are the coins with predominantly steel composition with a coating of one fo the three main elements. \reminder{CITATIONS}}
+    \label{tab:coins-official}
+\end{table}
 
 \end{document}
