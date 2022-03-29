@@ -22,12 +22,12 @@
 
 \section{Introduction}
 
-X-rays are an important experimental tool and have been for more than a 100 years now --- from the first Nobel Prize for their discovery, and still now. In this experiment, we will first verify Moseley's Law, and then use X-ray spectroscopy to analyse several samples of metal as well as coins from various places around the world.\reminder{finish this intro at the end.} %TODO
+X-rays are an important experimental tool and have been for more than a 100 years now --- from the first Nobel Prize for their discovery, and still now. In this experiment, we will first verify Moseley's Law, and then use X-ray spectroscopy to analyse several samples of metal as well as coins from various places around the world.\reminder{finish this intro at the end.}
 
 First, we introduce some of the background theory behind X-rays and their production.
 
 \subsection{X-ray atomic spectra}
-The emission spectra of atoms is due to energy transition of shell electrons from a higher energy level to a lower energy level. We are interested in X-rays specifically, which are due to transitions in the inner electron levels of high-$Z$ atoms. These are shielded from the outer electron layers (the higher $Z$, the better the shielding \reminder{CHECK}) and are mostly unaffected by the chemical structure of the sample i.e. by the surrounding atoms. Therefore, we can take an energy level of an electron to be $E_n = -\rydberg\left(Z\right) / n^2$ where $\rydberg \left(Z\right)= \rydberg_\infty \left(Z - b\right)^2$ is the modified Rydberg constant for a given $Z$, $b$ is some parameter depending on atom, and $\rydberg_\infty$ is the hydrogen Rydberg constant. Then, the energy of an emitted photon by a transition from level $n_\mathrm{i}$ to $n_\mathrm{f}$ is given by:
+The emission spectra of atoms is due to energy transition of shell electrons from a higher energy level to a lower energy level. We are interested in X-rays specifically, which are due to transitions in the inner electron levels of high-$Z$ atoms. These are shielded from the outer electron layers and are mostly unaffected by the chemical structure of the sample i.e. by the surrounding atoms. Therefore, we can take an energy level of an electron to be $E_n = -\rydberg\left(Z\right) / n^2$ where $\rydberg \left(Z\right)= \rydberg_\infty \left(Z - b\right)^2$ is the modified Rydberg constant for a given $Z$, $b$ is some parameter depending on atom, and $\rydberg_\infty$ is the hydrogen Rydberg constant. Then, the energy of an emitted photon by a transition from level $n_\mathrm{i}$ to $n_\mathrm{f}$ is given by:
 \begin{equation}\label{eqn:x-ray-energy}
     \varepsilon = \rydberg\left(Z\right) \left(\frac{1}{n_\mathrm{f}^2} - \frac{1}{n_\mathrm{i}^2}\right).
 \end{equation}
@@ -86,7 +86,7 @@ This tells us that:
 where $n_\mathrm{a}$ and $n_\mathrm{b}$ are the number densities of materials a and b. From that, we could easily calculate percentage compositions for number densities or mass densities ($\rho = n \times (\text{molar mass})$).
 
 \section{Experiment}\label{sec:experiment}
-Our experiment consists of the setup presented in Figure \ref{fig:experim-setup}. First, we have an X-ray source with a molybdenum anode, which produces some characteristic \Kalpha X-rays that can be used for diffraction experiments (see the first experiment part of SS16 \reminder{put reference}) and some continuous bremsstrahlung (see Section \ref{subsec:x-ray-production} for more details). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit mostly in the characteristic X-rays of K,L, and M series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are: tube voltage $V = \qty{35}{kV}$, emission current \qty{1}{A}, exposure time $t=$\reminder{ask Darryl}. This, according to \eqref{eqn:bremss-energy-max} and \eqref{eqn:Kalpha-energy-out}, allows us to produce, for example, \Kalpha X-rays with energy up to \qty{26.25}{keV} from samples with atomic numbers up to at least $50$, ignoring contribution of $b$.
+Our experiment consists of the setup presented in Figure \ref{fig:experim-setup}. First, we have an X-ray source with a molybdenum anode, which produces some characteristic \Kalpha X-rays that can be used for diffraction experiments (see the first experiment part of SS16 \reminder{put reference}) and some continuous bremsstrahlung (see Section \ref{subsec:x-ray-production} for more details). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit mostly in the characteristic X-rays of K,L, and M series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are: tube voltage $V = \qty{35}{kV}$, emission current \qty{1}{A}, exposure time $t=\qty{100}{s}$. This, according to \eqref{eqn:bremss-energy-max} and \eqref{eqn:Kalpha-energy-out}, allows us to produce, for example, \Kalpha X-rays with energy up to \qty{26.25}{keV} from samples with atomic numbers up to at least $50$, ignoring contribution of $b$.
 
 \begin{figure}[!htbp]
     \centering
@@ -133,7 +133,7 @@ Also, can calculate ratio from given values:
 \begin{equation}
     \text{predicted: }\frac{m_\mathrm{K}}{m_\mathrm{L}} = \sqrt{\frac{27}{5}} = 2.324,\qquad \text{observed: } \frac{m_\mathrm{K}}{m_\mathrm{L}} = \frac{0.1026}{0.0411} = 2.496.
 \end{equation}
-Agreement is not so good, but we have not taken into account many other effects like change of energy due to being in a state $l \neq 0$ etc. So, not too bad. \reminder{can expand a bit maybe}.
+Agreement is not so good, but we have not taken into account many other effects like change of energy due to being in a state $l \neq 0$ etc. So, not too bad. %\reminder{can expand a bit maybe}.
 
 \subsection{Provided alloys and semiconductors}
 Now, can move to the analysis of samples. We will use fluorescence to determine the composition of the semiconductors from the non-MP part and of some unlabelled samples that are provided in the physics lab.
@@ -242,7 +242,7 @@ When looking at plots of the spectra, we see that almost all coins are made pred
 
 The official information lists the 1 Yen coin to be maid of 100\% aluminium \reminder{cite}. The \Kalpha line for aluminum is at \qty{1.49}{keV}, out of the range of our setup. This is the reason we do not see any signal in our spectrum.
 
-The official information informs us that the 25c canadian coin is a 94\% steel core with 6\% Ni-Cu plating. When we look at the spectrum, however, the strength of the Fe line is much less than the Ni and Cu. This is due to the fact that the X-rays do not penetrate deep into the coin. If a thick enough coating is applied, we could even fully shield the steel core. In fact, several coins on our list follow this pattern, e.g. the new 2p and 10p coins.
+The official information informs us that the 25c canadian coin is a 94\% steel core with 6\% Ni-Cu plating \reminder{cite}. When we look at the spectrum, however, the strength of the Fe line is much less than the Ni and Cu. This is due to the fact that the X-rays do not penetrate deep into the coin. If a thick enough coating is applied, we could even fully shield the steel core. In fact, several coins on our list follow this pattern, e.g. the new 2p and 10p coins.
 
 \subsubsection{Why Ni,Cu,Zn?}
 One obvious question that comes up form these results is why are alloys of Ni, Cu, and Zn the choice? There are several properties of these alloys that make them preferable for coin minting.
@@ -251,15 +251,15 @@ Historically, coins were most often made from gold, silver, and copper, with the
 
 Firstly, there are visual consideration of the coins. Ni-Cu and Cu-Zn alloys can have varying colours depending on the ratio of elements used. Ni-Cu are usually silver in appearance, while Cu-Zn alloys are usually golden in appearance, with small amounts of other additives sometimes present, like in the case of the \emph{nordic gold} alloy used for the make of the 50 euro cent coin.
 
-Secondly, the cost considerations required some inexpensive materials to be used so that mass production is practical and coins are not produced at a loss. Due to inflation, this has led to the change of coin composition throughout the years. One example is the UK 10p coin. While the old coin was made from pure Ni25Cu75, the new coin is made from 94\% steel clad in 6\% Ni. The method of implementing a cheaper core while using Ni,Cu,Zn for an outer layer also keeps the appearance the same or similar, which is one of the reasons for the approach.
+Secondly, the cost considerations required some inexpensive materials to be used so that mass production is practical and coins are not produced at a loss. Due to inflation, this has also led to the change of coin composition throughout the years. One example is the UK 10p coin. While the old coin was made from pure Ni25Cu75, the new coin is made from 94\% steel clad in 6\% Ni. The method of implementing a cheaper core while using Ni,Cu,Zn for an outer layer also keeps the appearance the same or similar, which is one of the reasons for the approach.
 
-Thirdly, the minting of the coins includes making the alloys and producing the coins with intricate detailing on their surfaces. The alloying of the specific ratios required by the specifications can be a difficult task outside of the specialised large scale industrial complexes. The three metals also allow for the detailing on different design coins --- their alloys have been used to produce detailing by artisans for centuries (millennia?). Both of these specifics make the production of good counterfeit coins more difficult, which brings more security to the currency.
+Thirdly, the minting of the coins includes making the alloys and producing the coins with intricate detailing on their surfaces. The alloying of the specific ratios required by the specifications can be a difficult task outside of the specialised large scale industrial complexes. The three metals also allow for the detailing on different designs --- their alloys have been used to produce detailing by artisans for centuries (millennia?). Both of these specifics make the production of good counterfeit coins more difficult, which brings more security to the currency.
 
 Finally, these alloys are very practical for everyday use. Coins, in their daily use, are exposed to the elements and physical wear. These alloys are very resistant to rusting (although Ni-Cu are often subject to formation of \emph{patina}) and have high durability against physical stresses like bending, stretching etc. This is another reason for the cladding method --- this gives them resistance against the elements and the physical toughness also helps preserve the detailing on the surface.
 %sprinkle some citations pls.
 
 \subsubsection{Cost-based analysis of coins.}
-\reminder{This is a potential direction to investigate. Main idea --- calculate the ``value'' of a coin via its weight+official composition to see if anything interesting appears (coins worth more than their value, similar value for all coins etc.)
+\reminder{This is a potential direction to investigate. Main idea --- calculate the ``value'' of a coin via its weight+official composition to see if anything interesting appears (coins worth more than their value, similar value for all coins etc.)}
 
 \section{Conclusions}
 \lipsum[1-5]
