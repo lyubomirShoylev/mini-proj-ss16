@@ -35,25 +35,23 @@ We can rewrite this at fixed $n_\mathrm{i}$, $n_\mathrm{f}$ (i.e. for a given li
     \sqrt{\varepsilon} = m \times Z + C,
 \end{equation}  where $m$, $C$ are some constants. This relationship is known as `Moseley's Law'.
 
-The name convention of the energy levels of low-$n$ in X-ray notation is described in Table \ref{tab:x-ray-notation}. Usually, the lines which are due to a transition from a higher energy level to a K1 level are referred to as K-series; similarly for L-series and so on.
+The name convention of the energy levels of low-$n$ in X-ray notation is described in Table \ref{tab:siegbahn-notation}. The energy difference between different L, M levels is not so big, so if we have a low resolution detector we usually observe e.g. only one \Kalpha line.
 \begin{table}[!htbp]
     \centering
-    \begin{tabular}{@{}cccccc@{}}
+    \begin{tabular}{@{}llll@{}}
     \toprule
-    \multicolumn{4}{l}{Quantum numbers} & \multirow{2}{*}{Atomic notation} & \multirow{2}{*}{X-ray notation} \\ \cmidrule(r){1-4}
-    n      & l      & s       & j       &                                  &                                 \\ \midrule
-    1      & 0      & 1/2     & 1/2     & 1S1/2                            & K1                              \\
-    2      & 0      & 1/2     & 1/2     & 2S1/2                            & L1                              \\
-    2      & 1      & 1/2     & 1/2     & 2P1/2                            & L2                              \\
-    2      & 1      & 1/2     & 3/2     & 2P3/2                            & L3                              \\
-    3      & 0      & 1/2     & 1/2     & 3S1/2                            & M1                              \\
-    3      & 1      & 1/2     & 1/2     & 3P1/2                            & M2                              \\
-    3      & 1      & 1/2     & 3/2     & 3P3/2                            & M3                              \\
-    3      & 2      & 1/2     & 3/2     & 3D3/2                            & M4                              \\
-    3      & 2      & 1/2     & 5/2     & 3D5/2                            & M5                              \\ \bottomrule
+    \multicolumn{1}{c}{Initial level} & \multicolumn{1}{c}{Final level} & \multicolumn{1}{c}{Siegbahn notation} & \multicolumn{1}{c}{IUPAC notation} \\ \midrule
+    \multirow{4}{*}{K ($1\mathrm{s}_{1/2}$)}  & L3 ($2\mathrm{p}_{3/2}$) & $\mathrm{K}_{\alpha 1}$ & K-L3  \\
+                                              & L2 ($2\mathrm{p}_{1/2}$) & $\mathrm{K}_{\alpha 2}$ & K-L2  \\
+                                              & M3 ($3\mathrm{p}_{3/2}$) & $\mathrm{K}_{\beta 1}$  & K-M3  \\
+                                              & M2 ($3\mathrm{p}_{1/2}$) & $\mathrm{K}_{\beta 3}$  & K-M2  \\
+    \multirow{2}{*}{L3 ($2\mathrm{p}_{3/2}$)} & M5 ($3\mathrm{d}_{5/2}$) & $\mathrm{L}_{\alpha 1}$ & L3-M5 \\
+                                              & M4 ($3\mathrm{d}_{3/2}$) & $\mathrm{L}_{\alpha 2}$ & L3-M4 \\
+    L2 ($2\mathrm{p}_{1/2}$)                  & M4 ($3\mathrm{d}_{3/2}$) & $\mathrm{L}_{\beta 1}$  & L2-M4 \\
+    M5 ($3\mathrm{d}_{5/2}$)                  & N7 ($4\mathrm{f}_{7/2}$) & $\mathrm{M}_{\alpha 1}$ & M5-N7 \\ \bottomrule
     \end{tabular}
-    \caption{Table describing the connection between X-ray notation and Atomic notation. \reminder{cite source, fix notation upper/lower index. Maybe add the old Siegbahn notation - used later in text?}}
-    \label{tab:x-ray-notation}
+    \caption{Table of the connection between Siegbahn and IUPAC notation. IUPAC levels are listed with atomic notation as well. Source: \cite{Jenkins1991}.}
+    \label{tab:siegbahn-notation}
 \end{table}
 
 \subsection{X-ray production}\label{subsec:x-ray-production}
@@ -76,7 +74,7 @@ Suppose we use one such continuous X-ray source for the production of X-rays for
 \end{equation}
 A process like this one, in which $\varepsilon_\mathrm{in} \neq \varepsilon_\mathrm{out}$, is called \emph{flourescence}.
 
-\subsection{Composition analysis}
+\subsection{Composition analysis}\label{subsec:compos-analysis}
 As said above, the X-ray emission is relatively independent of the composition of the sample. We can use this fact to perform a composition analysis on a sample by exposing it to the continuous bremsstrahlung of a source; this will allow the different components to fluoresce. The signal will give us information not only \emph{which} elements are present (given that the source is high enough to allow fluorescence), but their relative contribution --- the intensity of the signal will depend only on the number density $n$. Suppose we measure the intensity of a two-metal alloy with the peaks in the K-L3 line as $I_\mathrm{a}$ and $I_\mathrm{b}$.
 This tells us that:
 \begin{equation}
@@ -85,7 +83,7 @@ This tells us that:
 where $n_\mathrm{a}$ and $n_\mathrm{b}$ are the number densities of materials a and b. From that, we could easily calculate percentage compositions for number densities or mass densities ($\rho = n \times (\text{molar mass})$).
 
 \section{Experiment}\label{sec:experiment}
-Our experiment consists of the setup presented in Figure \ref{fig:experim-setup}. First, we have an X-ray source with a molybdenum anode, which produces some characteristic \Kalpha X-rays that can be used for diffraction experiments (see the first experiment part of SS16 \reminder{put reference}) and some continuous bremsstrahlung (see Section \ref{subsec:x-ray-production} for more details). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit mostly in the characteristic X-rays of K,L, and M series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are: tube voltage $V = \qty{35}{kV}$, emission current \qty{1}{A}, exposure time $t=\qty{100}{s}$. This, according to \eqref{eqn:bremss-energy-max} and \eqref{eqn:Kalpha-energy-out}, allows us to produce, for example, \Kalpha X-rays with energy up to \qty{26.25}{keV} from samples with atomic numbers up to at least $50$, ignoring contribution of $b$.
+Our experiment consists of the setup presented in Figure \ref{fig:experim-setup}. First, we have an X-ray source with a molybdenum anode, which produces some characteristic \Kalpha X-rays that can be used for diffraction experiments (see the first part of \cite{OxfPhys2010}) and some continuous bremsstrahlung (see Section \ref{subsec:x-ray-production} for more details). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit mostly in the characteristic X-rays of K,L, and M series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are: tube voltage $V = \qty{35}{kV}$, emission current \qty{1}{A}, exposure time $t=\qty{100}{s}$. This, according to \eqref{eqn:bremss-energy-max} and \eqref{eqn:Kalpha-energy-out}, allows us to produce, for example, \Kalpha X-rays with energy up to \qty{26.25}{keV} from samples with atomic numbers up to at least $50$, ignoring contribution of $b$.
 
 \begin{figure}[!htbp]
     \centering
@@ -142,7 +140,7 @@ The semiconductors are part of the non-MP experiment, where we determined their 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{img/spect-semiconductors.png}
-    \caption{Fluorescence spectra of the Fe, Ag calibration and semiconductors labelled as X2 and Y2 in sample boxes provided. We see that X2 and Y2 show traces of In, and Y2 shows additionally traces of Sb. \reminder{prob should go to appendix.}}
+    \caption{Fluorescence spectra of the Fe, Ag calibration and semiconductors labelled as X2 and Y2 in sample boxes provided. We see that X2 and Y2 show traces of In, and Y2 shows additionally traces of Sb. \reminder{prob should go to appendix?}}
     \label{fig:spect-semiconductors}
 \end{figure}
 
@@ -154,13 +152,22 @@ We see that semiconductor Y2 shows traces of In and Sb, a group III and V elemen
 For sample X2, we see a trace of In only. Checking with our result from the diffraction analysis, we see that the dopant is P (phosphorus). The characteristic X-rays of P in K-series (most energetic ones) have energies around \qty{2}{keV}, which is around our detection limit of about \qtyrange{2}{4}{keV}. This highlights one of the shortcomings of our method: it is limited in detecting only those elements, which have X-ray emission lines in the range of the bremsstrahlung and the range of operation of the detector.
 
 \subsubsection{Unlabelled alloys}\label{subsubsec:unlabelled-alloys}
-The lab has two boxes of unlabelled metallic samples - alloys of different metals. We can determine their composition and ratios by using \reminder{sec 1.3}. Result is presented in Table \ref{tab:unlabelled-alloys}.
+The lab has two boxes of unlabelled metallic samples - alloys of different metals. We can determine their composition and ratios by using Section \ref{subsec:compos-analysis}. Result is presented in Table \ref{tab:unlabelled-alloys}.
 
 \begin{table}[htbp]
 \centering
-\begin{tabular}{@{}llllllll@{}}
+\sisetup{table-number-alignment=center, table-figures-integer = 1, round-mode = places}
+\begin{tabular}{@{}
+    lll
+    S[table-figures-decimal = 2, round-precision=1]
+    S[table-figures-decimal = 2, round-precision=2]
+    S[table-figures-decimal = 2, round-precision=2]
+    S[table-figures-decimal = 2, round-precision=2]
+    S[table-figures-decimal = 2, round-precision=2]
+    @{}
+    }
 \toprule
-sample & element  & line   & intensity & Kalph/Kbet  & k        & prop     & by mass     \\ \midrule
+sample & element  & line   &{intensity}& {Kalph/Kbet}& {nA/nB}  & {prop}   & {by mass}   \\ \midrule
 b1-1   & Cr       & Kalpha & 381.9     & 5.550872093 & 0.422877 & 0.297198 & 0.277555397 \\
 b1-1   & Cr       & Kbeta  & 68.8      &             &          &          &             \\
 b1-1   & Fe       & Kalpha & 903.1     & 4.138863428 &          & 0.702802 & 0.722444603 \\
@@ -189,13 +196,13 @@ b2-f   & Fe       & Kbeta  & 371.5     &             &          &          &    
 b2-f   & Zn       & Kalpha & 563.9     & 9.367109635 &          & 0.280939 & 0.261536759 \\
 b2-f   & Zn       & Kbeta  & 60.2      &             &          &          &             \\ \bottomrule
 \end{tabular}
-\caption{Table of the fitted intensities in alloy samples. Some of the measurements made had signal comparable with the background due to a human error during data acquisition; included here for completeness. \reminder{add a column with line energy, include siunitx for number formatting, prob delete the unusable ones}}
+\caption{Table of the fitted intensities in alloy samples. Some of the measurements made had signal comparable with the background due to a human error during data acquisition; included here for completeness. \reminder{add a column with line energy, improve siunitx for number formatting, prob delete the unusable ones}}
 \label{tab:unlabelled-alloys}
 \end{table}
 
-We can first check for consistency of the fits by looking at the rations of intensities for \Kalpha and \Kbeta, which should be approximately the same for al samples as it depends on the structure of the individual atom. Samples b2-c,d,f have close values for both the Fe and Zn lines. Since these two elements do not overlap in the spectrum (\reminder{ref appendix here}), these ratios should be close to the true ratio. We would expect to observe similar ratios in the other samples for Fe and Zn.
+We can first check for consistency of the fits by looking at the rations of intensities for \Kalpha and \Kbeta, which should be approximately the same for al samples as it depends on the structure of the individual atom. Samples b2-c,d,f have close values for both the Fe and Zn lines. Since these two elements do not overlap in the spectrum (as seen in Figure \ref{fig:spect-b2-c}), these ratios should be close to the true ratio. We would expect to observe similar ratios in the other samples for Fe and Zn.
 
-For sample b1-1, the Fe ratio is a little above 4, so we can say that the fit was pretty good. For samples b1-2,3, the Zn ratio is twice the one measured above. The fit here is pretty poor since Cu and Zn are respectively $Z=29$ and $Z=30$. Their spectra overlap by a lot --- the \Kalpha of Zn is between \Kalpha and \Kbeta of Cu. This, combined with the low resolution of our detector, makes it pretty difficult to fit here. Nevertheless, the \Kalpha lines are much stronger, so we can still try to extract the composition of the alloys (especially since they are close here).
+For sample b1-1, the Fe ratio is a little above 4, so we can say that the fit was pretty good. For samples b1-2,3, the Zn ratio is twice the one measured above. The fit here is pretty poor since Cu and Zn are respectively $Z=29$ and $Z=30$. Their spectra overlap by a lot (as seen in Fiugre \ref{fig:spect-b1-3}) --- the \Kalpha of Zn is between \Kalpha and \Kbeta of Cu. This, combined with the low resolution of our detector, makes it pretty difficult to fit here. Nevertheless, the \Kalpha lines are much stronger, so we can still try to extract the composition of the alloys.
 
 Alloy composition is usually presented by mass in practical applications.These results are in the last column of Table \ref{tab:unlabelled-alloys}.
 
@@ -239,9 +246,9 @@ The lab has a box of various coins from around the world, the content of which w
 
 When looking at plots of the spectra, we see that almost all coins are made predominantly out of Ni, Cu, and Zn with $Z=\numrange{28}{30}$ respectively. The spectra are overlapping, so similarly to the b1-2,3 samples in Section \ref{subsubsec:unlabelled-alloys}, we cannot really fit the samples well for all $\alpha, \beta$ lines. Nevertheless, we can still determine if one of the three elements is present. Additionally, we note down any additional features of the spectra that are of interest.The results can be summarised in Table \ref{tab:coin-measured}. Two exceptions to the general rule are obvious - the 1 Yen and 25c canadian coins. We can compare our results with the information from the institutions that issue these coins.
 
-The official information lists the 1 Yen coin to be maid of 100\% aluminium \reminder{cite}. The \Kalpha line for aluminum is at \qty{1.49}{keV}, out of the range of our setup. This is the reason we do not see any signal in our spectrum.
+The official information lists the 1 Yen coin to be maid of 100\% aluminium (\reminder{citation needed}). The \Kalpha line for aluminum is at \qty{1.49}{keV}, out of the range of our setup. This is the reason we do not see any signal in our spectrum.
 
-The official information informs us that the 25c canadian coin is a 94\% steel core with 6\% Ni-Cu plating \reminder{cite}. When we look at the spectrum, however, the strength of the Fe line is much less than the Ni and Cu. This is due to the fact that the X-rays do not penetrate deep into the coin. If a thick enough coating is applied, we could even fully shield the steel core. In fact, several coins on our list follow this pattern, e.g. the new 2p and 10p coins.
+The official information informs us that the 25c canadian coin is a 94\% steel core with 6\% Ni-Cu plating (\reminder{citation needed}). When we look at the spectrum, however, the strength of the Fe line is much less than the Ni and Cu. This is due to the fact that the X-rays do not penetrate deep into the coin. If a thick enough coating is applied, we could even fully shield the steel core. In fact, several coins on our list follow this pattern, e.g. the new 2p and 10p coins.
 
 \subsubsection{Why Ni,Cu,Zn?}
 One obvious question that comes up form these results is why are alloys of Ni, Cu, and Zn the choice? There are several properties of these alloys that make them preferable for coin minting.
@@ -263,10 +270,38 @@ Finally, these alloys are very practical for everyday use. Coins, in their daily
 \section{Conclusions}
 \lipsum[1-5]
 
+\bibliographystyle{agsm}
+% \renewcommand{\bibname}{#new-name} -- rename the title of bibliography chapter
+\bibliography{references.bib}
+
 \newpage
 \appendix
+\renewcommand\thesection{Appendix \Alph{section}}
+\renewcommand{\thetable}{\Alph{section}\arabic{table}}
+\setcounter{table}{0}
+\renewcommand{\thefigure}{\Alph{section}\arabic{figure}}
+\setcounter{figure}{0}
+
 \section{Energy spectra plots}
-Add more energy spectra plots here, which do not fit/not vital for main text.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/spect-b1-1.png}
+    \caption{Spectrum of sample b1-1. Calibration spectra of Fe and Ag in black and red respectively. It can be seen that the sample consists of Fe and Cr, and their spectra overlap. This presents a difficulty in fitting emission lines.}
+    \label{fig:spect-b1-1}
+\end{figure}
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/spect-b1-3.png}
+    \caption{Spectrum of sample b1-3. Calibration spectra of Fe and Ag in black and red respectively. It can be seen that the sample consists of Cu and Zn, and their spectra overlap significantly. This presents a difficulty in fitting emission lines.}
+    \label{fig:spect-b1-3}
+\end{figure}
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/spect-b2-c.png}
+    \caption{Spectrum of sample b2-c. Calibration spectra of Fe and Ag in black and red respectively. It can be seen that the sample consists of Fe and Zn, and their spectra do not overlap.}
+    \label{fig:spect-b2-c}
+\end{figure}
+
 
 \section{Extracted intensity data}
 Add data here as tables, refer to it when needed.
@@ -274,33 +309,33 @@ Add data here as tables, refer to it when needed.
 \begin{table}[htbp]
     \centering
     \begin{tabular}{@{}llllllll@{}}
-    \toprule
-    No in   measur & Country        & Denomination   & Ni,\%    & Cu, \%   & Zn, \% & Other, \%            & Weight, g  \\ \midrule
-    3              & United Kingdom & 50p old        & 25       & 75       & 0      & 0                    &            \\
-    4              & United Kingdom & 50p new        & 25       & 75       & 0      & 0                    &            \\
-    5              & United Kingdom & 20p new        & 16       & 84       & 0      & 0                    &            \\
-    6              & United Kingdom & 10p old        & 25       & 75       & 0      & 0                    &            \\
-    7              & United Kingdom & 10p new        & 6        & 0        & 0      & mild Steel - 94      &            \\
-    8              & United Kingdom & 2p new         & 0        & 6        & 0      & mild Steel - 94      &            \\
-    9              & Singapore      & 1 dollar old   & 2        & 92       & 0      & Al - 6               & 8.05+-0.20 \\
-    10             & Singapore      & 50c old        & 25       & 75       & 0      & 0                    & 8.56+-0.20 \\
-    11             & Singapore      & 20c new        & ?        & 0        & 0      & steel - ?            & 6.56+-0.28 \\
-    12             & Bulgaria       & 50 stotinki    & 10       &          &        & 0                    & 5          \\
-    13             & Bulgaria       & 5 stotinki     &          &          &        & steel - ?            & 3.5        \\
-    14             & European Union & 50c            & 0        & 89       & 5      & Al - 5, Sn -1        & 7.8        \\
-    15             & European Union & 2c old         &          & x        &        & 0                    & 3.06       \\
-    16             & European Union & 2c new         &          & x        &        & 0                    & 3.06       \\
-    17             & Romania        & 10 bani        & ?        & 0        & 0      & steel - ?            & 4          \\
-    18             & Norway         & 1 krone        & 25       & 75       & 0      & 0                    & 4.35       \\
-    19             & Switzerland    & 20 centim      & 25       & 75       & 0      & 0                    & 4          \\
-    20             & Sweden         & 1 krona        & 25       & 75       & 0      & 0                    &            \\
-    21             & Japan          & 1 yen          & 0        & 0        & 0      & al-100               & 1          \\
-    22             & Hong Kong      & 10c            &          &          &        & 0                    & 1.85       \\
-    23             & Uganda         & 200 schillings & $\sim$30 & $\sim$70 & 0      & 0                    & 8.5        \\
-    24             & USA            & 25c            &          &          &        & 0                    &            \\
-    25             & USA            & 1c             & 0        & 2.5      & 97.5   & 0                    & 2.5        \\
-    26             & Canada         & 25c            & 2.2      & 3.8      & 0      & Steel AISI 1006 - 94 & 4.4        \\
-    27             & Brazil         & 5 centavos     & 0        &          &        & 0                    &            \\ \bottomrule
+        \toprule
+        No & Country        & Denomination   & Ni,\%    & Cu, \%   & Zn, \% & Other, \%            & Weight, g  \\ \midrule
+        3  & United Kingdom & 50p old        & 25       & 75       & 0      & 0                    &            \\
+        4  & United Kingdom & 50p new        & 25       & 75       & 0      & 0                    &            \\
+        5  & United Kingdom & 20p new        & 16       & 84       & 0      & 0                    &            \\
+        6  & United Kingdom & 10p old        & 25       & 75       & 0      & 0                    &            \\
+        7  & United Kingdom & 10p new        & 6        & 0        & 0      & mild Steel - 94      &            \\
+        8  & United Kingdom & 2p new         & 0        & 6        & 0      & mild Steel - 94      &            \\
+        9  & Singapore      & 1 dollar old   & 2        & 92       & 0      & Al - 6               & 8.05+-0.20 \\
+        10 & Singapore      & 50c old        & 25       & 75       & 0      & 0                    & 8.56+-0.20 \\
+        11 & Singapore      & 20c new        & ?        & 0        & 0      & steel - ?            & 6.56+-0.28 \\
+        12 & Bulgaria       & 50 stotinki    & 10       &          &        & 0                    & 5          \\
+        13 & Bulgaria       & 5 stotinki     &          &          &        & steel - ?            & 3.5        \\
+        14 & European Union & 50c            & 0        & 89       & 5      & Al - 5, Sn -1        & 7.8        \\
+        15 & European Union & 2c old         &          & x        &        & 0                    & 3.06       \\
+        16 & European Union & 2c new         &          & x        &        & 0                    & 3.06       \\
+        17 & Romania        & 10 bani        & ?        & 0        & 0      & steel - ?            & 4          \\
+        18 & Norway         & 1 krone        & 25       & 75       & 0      & 0                    & 4.35       \\
+        19 & Switzerland    & 20 centim      & 25       & 75       & 0      & 0                    & 4          \\
+        20 & Sweden         & 1 krona        & 25       & 75       & 0      & 0                    &            \\
+        21 & Japan          & 1 yen          & 0        & 0        & 0      & al-100               & 1          \\
+        22 & Hong Kong      & 10c            &          &          &        & 0                    & 1.85       \\
+        23 & Uganda         & 200 schillings & $\sim$30 & $\sim$70 & 0      & 0                    & 8.5        \\
+        24 & USA            & 25c            &          &          &        & 0                    &            \\
+        25 & USA            & 1c             & 0        & 2.5      & 97.5   & 0                    & 2.5        \\
+        26 & Canada         & 25c            & 2.2      & 3.8      & 0      & Steel AISI 1006 - 94 & 4.4        \\
+        27 & Brazil         & 5 centavos     & 0        &          &        & 0                    &            \\ \bottomrule
     \end{tabular}
     \caption{Table of official info about the international coins. Notable are the coins with predominantly steel composition with a coating of one fo the three main elements. \reminder{CITATIONS}}
     \label{tab:coins-official}
