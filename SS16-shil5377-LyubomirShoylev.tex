@@ -86,27 +86,27 @@ where $n_\mathrm{a}$ and $n_\mathrm{b}$ are the number densities of materials a 
 \end{equation}
 
 \section{Experiment}\label{sec:experiment}
-Our experiment consists of the setup presented in Figure \ref{fig:experim-setup}. First, we have an X-ray source with a molybdenum anode, which produces some characteristic \Kalpha X-rays that can be used for diffraction experiments (see the first part of \cite{OxfPhys2010}) and some continuous bremsstrahlung (see Section \ref{subsec:x-ray-production} for more details). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit mostly in the characteristic X-rays of K,L, and M series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are: tube voltage $V = \qty{35}{kV}$, emission current \qty{1}{A}, exposure time $t=\qty{100}{s}$. This, according to \eqref{eqn:bremss-energy-max} and \eqref{eqn:Kalpha-energy-out}, allows us to produce, for example, \Kalpha X-rays with energy up to \qty{26.25}{keV} from samples with atomic numbers up to at least $50$, ignoring contribution of $b$.
+Our experiment consists of the setup presented in Figure \ref{fig:experim-setup}. First, we have an X-ray source with a molybdenum anode, which produces some characteristic \Kalpha X-rays that can be used for diffraction experiments (see the first part of \cite{OxfPhys2010} \reminder{fix this plox}) and some continuous bremsstrahlung (see Section \ref{subsec:x-ray-production} for more details). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit mostly in the characteristic X-rays of K, L, and M series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are: tube voltage $V = \qty{35}{kV}$, emission current \qty{1}{A}, exposure time $t=\qty{100}{s}$. This, according to Equations \eqref{eqn:bremss-energy-max} and \eqref{eqn:Kalpha-energy-out}, allows us to produce, for example, \Kalpha X-rays with energy up to \qty{26.25}{keV} from samples with atomic numbers up to at least $50$, ignoring the contribution from $b$.
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=\textwidth]{img/experim-setup.png}
-    \caption{Diagram of the experimental setup. More info in the text of Section \ref{sec:experiment}.}\label{fig:experim-setup}
+    \caption{Diagram of the experimental setup. More information can be found in the text of Section \ref{sec:experiment}.}\label{fig:experim-setup}
 \end{figure}
 
-To operate the apparatus and extract data, we use the software provided by the labs \emph{CASSY Lab 2} (see \cite{cassylab2}). The program has a built in database for the X-ray emission lines of most elements. It also allows for calculating a peak centre and fitting gaussian profiles with specified energy to find the intensity of emission lines. (\reminder{expand on applicability since x-ray lines are asymmetrical.})
+To operate the apparatus and extract data, we use the software \emph{CASSY Lab 2} (see \cite{cassylab2}). The program has a built in database for the X-ray emission lines of most elements. It also allows for calculating a peak centre and fitting Gaussian profiles with specified energy to find the intensity of emission lines. (\reminder{expand on applicability since x-ray lines are asymmetrical.})
 
-Before we can do any work that has to do with determining energies or referring to energy values from a database, need to set the scaling of the measurement apparatus. We will do so with two of the labelled provided samples - for Fe and Ag. These cover a wide range of values in the bremsstrahlung spectrum, so they are a good way to set the scaling. The particular lines which we use to calibrate are the Fe \Kalpha with $E_\mathrm{Fe} = \qty{6.40}{keV}$ and the Ag \Kalpha with $E_\mathrm{Ag} = \qty{22.17}{keV}$. We also have to note the observational lower and upper limits, respectively \qtyrange{2}{4}{keV} and $\approx \qty{35}{keV}$.
+Before determining the energies, we first need to calibrate the energy scale. We will use two known samples - Fe and Ag. We choose these two samples since their \Kalpha lines lie at the two ends of the range of energies for which our samples have emission lines. The particular lines which we use to calibrate are the Fe \Kalpha with $E_\mathrm{Fe} = \qty{6.40}{keV}$ and the Ag \Kalpha with $E_\mathrm{Ag} = \qty{22.17}{keV}$. Also note the observational lower and upper limits, respectively \qtyrange{2}{4}{keV} and $\approx \qty{35}{keV}$. The calibration spectra are presented in Figure \ref{fig:calibration}.
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{img/calib.png}
-    \caption{These are the Fe (black) and Ag (red) spectra used for calibration.}\label{fig:calibration}
+    \caption{Fe and Ag spectra used for calibration. On the x-axis, we have the energy of the detected signal in \unit{keV}. On the y-axis, we have the signal counts for the Ag spectrum. \reminder{fix figure}}\label{fig:calibration}
 \end{figure}
 
-The first part of the experiment will test the validity of Moseley's Law with the help of several samples of known substances.
+The first part of the experiment will test the validity of Moseley's Law making use of several samples of known substances.
 
-The second part and third part of the experiment will utilise our knowledge about X-rays to learn more about the composition of some samples provided for us, and about some metal coins from around the world.
+The second part and third part of the experiment will utilise our knowledge about X-rays to learn more about the composition of other samples, and about some metal coins from around the world.
 
 \section{Result and Analysis}
 
