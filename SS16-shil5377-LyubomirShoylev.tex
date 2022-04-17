@@ -31,7 +31,7 @@ The emission spectra of atoms is due to energy transitions of shell electrons fr
     \varepsilon = \rydberg\left(Z\right) \left(\frac{1}{n_\mathrm{f}^2} - \frac{1}{n_\mathrm{i}^2}\right).
 \end{equation}
 We can rewrite this at fixed $n_\mathrm{i}$, $n_\mathrm{f}$ (i.e. for a given line) as:
-\begin{equation}
+\begin{equation}\label{eqn:moseleys-eqn}
     \sqrt{\varepsilon} = m \times Z + C,
 \end{equation}  where $m$, $C$ are constants. This relationship is known as `Moseley's Law'.
 
@@ -111,29 +111,29 @@ The second part and third part of the experiment will utilise our knowledge abou
 \section{Result and Analysis}
 
 \subsection{Moseley's Law}
-We measure the line energy values from the labelled samples. These are mainly in two groups:
+We measure the line energy values from the labelled samples. We can separate these in two groups:
 \begin{itemize}[noitemsep]
-    \item those, whose \Kalpha lines lie in the observable range (excluding our two calibration points);
-    \item those, whose \Lalpha lines lie in the observable range.
+    \item those whose \Kalpha lines lie in the observable range (excluding our two calibration points);
+    \item those whose \Lalpha lines lie in the observable range.
 \end{itemize}
-We expect to see a straight line fit for the two groups of lines. The scaling constant $m$ depends purely on the line we are observing, i.e. on the $n_\mathrm{i}, n_\mathrm{f}$ for the given line. We can predict the ratio of the constants for the two series. Following \eqref{eqn:x-ray-energy} and Moseley's law, we get:
+Recalling Equations \eqref{eqn:x-ray-energy} and \eqref{eqn:moseleys-eqn}, we expect to fit the data for the two groups with a straight line for each group. The slope $m$ depends purely on the line we are observing, i.e. on the $n_\mathrm{i}, n_\mathrm{f}$ for the given line. We can predict the ratio of the constants for the two series. Following Equations \eqref{eqn:x-ray-energy} and \eqref{eqn:moseleys-eqn}, we get:
 \begin{equation}
-    m_\mathrm{K} \propto \left(1 - \frac{1}{2^2}\right)^{\sfrac{1}{2}} = \sqrt{\frac{3}{4}},\quad m_\mathrm{L} \propto \left(\frac{1}{2^2} - \frac{1}{3^2}\right)^{\sfrac{1}{2}} = \sqrt{\frac{5}{36}} \quad \Rightarrow \frac{m_\mathrm{K}}{m_\mathrm{L}} = \sqrt{\frac{27}{5}}.
+    m_\mathrm{K} = \sqrt{\rydberg_\infty} \left(1 - \frac{1}{2^2}\right)^{\sfrac{1}{2}} \propto \sqrt{\frac{3}{4}},\quad m_\mathrm{L} = \sqrt{\rydberg_\infty} \left(\frac{1}{2^2} - \frac{1}{3^2}\right)^{\sfrac{1}{2}} \propto \sqrt{\frac{5}{36}} \quad \Rightarrow \quad \frac{m_\mathrm{K}}{m_\mathrm{L}} = \sqrt{\frac{27}{5}}.
 \end{equation}
+
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{img/moseleys.png}
-    \caption{sqrt(energy) vs Z number for given samples: \reminder{list samples. produce better final figures}.}\label{fig:moseleys}
+    \caption{The figure shows a plot of $\sqrt{\varepsilon}$ vs $Z$ for given samples: \reminder{list samples}. The elements have been labelled on the plot. We have applied a linear fit to the two groups of data: (a) in blue, we have the samples for which we observe a \Kalpha line; (b) in orange, we have the samples for which we observe a \Lalpha line. The fit formula is also displayes next to the fitted line. \reminder{. produce better final figures}.}\label{fig:moseleys}
 \end{figure}
-Results presented in Figure \ref{fig:moseleys}.
 
-We see that these both follow our expectations - have good fits to the model. We can deduce that our description of X-ray emission works sufficiently well for our purposes (given experimental accuracy etc), so we can proceed to use X-ray K and L series lines as a signature of a given element in spectral analysis.
+Figure \ref{fig:moseleys} shows the fits for the two series. We can see that the data is fitted well by the model provided by Equation \eqref{eqn:moseleys-eqn}, given the experimental precision. We can therefore proceed to use X-ray K and L series lines as a signature of a given element in spectral analysis.
 
-Also, can calculate ratio from given values:
+The ratio can also be calculated from the fitted values for the slopes, giving:
 \begin{equation}
     \text{predicted: }\frac{m_\mathrm{K}}{m_\mathrm{L}} = \sqrt{\frac{27}{5}} = 2.324,\qquad \text{observed: } \frac{m_\mathrm{K}}{m_\mathrm{L}} = \frac{0.1026}{0.0411} = 2.496.
 \end{equation}
-Agreement is not so good, but we have not taken into account many other effects like change of energy due to being in a state $l \neq 0$ etc. So, not too bad. %\reminder{can expand a bit maybe}.
+Agreement is not so good, but we have not taken into account many other effects like change of energy due to being in a state $l \neq 0$ etc. So, not too bad. \reminder{must expand a bit maybe, + language style}.
 
 \subsection{Provided alloys and semiconductors}
 Now, can move to the analysis of samples. We will use fluorescence to determine the composition of the semiconductors from the non-MP part and of some unlabelled samples that are provided in the physics lab.
