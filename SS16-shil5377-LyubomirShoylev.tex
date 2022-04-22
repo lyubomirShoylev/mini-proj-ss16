@@ -86,7 +86,7 @@ where $n_\mathrm{a}$ and $n_\mathrm{b}$ are the number densities of materials a 
 \end{equation}
 
 \section{Experiment}\label{sec:experiment}
-Our experiment consists of the setup presented in Figure \ref{fig:experim-setup}. First, we have an X-ray source with a molybdenum anode, which produces some characteristic \Kalpha X-rays that can be used for diffraction experiments (see the first part of \cite{OxfPhys2010} \reminder{fix this plox}) and some continuous bremsstrahlung (see Section \ref{subsec:x-ray-production} for more details). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit mostly in the characteristic X-rays of K, L, and M series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are: tube voltage $V = \qty{35}{kV}$, emission current \qty{1}{A}, exposure time $t=\qty{100}{s}$. This, according to Equations \eqref{eqn:bremss-energy-max} and \eqref{eqn:Kalpha-energy-out}, allows us to produce, for example, \Kalpha X-rays with energy up to \qty{26.25}{keV} from samples with atomic numbers up to at least $50$, ignoring the contribution from $b$.
+Our experiment consists of the setup presented in Figure \ref{fig:experim-setup}. First, we have an X-ray source with a Mo (molybdenum) anode, which produces some characteristic \Kalpha X-rays that can be used for diffraction experiments (see the first part of \cite{OxfPhys2010} \reminder{fix this plox}) and some continuous bremsstrahlung (see Section \ref{subsec:x-ray-production} for more details). These X-rays are focused through a circular aperture towards a target sample. The incident X-rays excite inner shell electrons, and the targets emit mostly in the characteristic X-rays of K, L, and M series. We detect these via an energy spectrometer that is sensitive in the region of our experiment. The setup parameters are: tube voltage $V = \qty{35}{kV}$, emission current \qty{1}{A}, exposure time $t=\qty{100}{s}$. This, according to Equations \eqref{eqn:bremss-energy-max} and \eqref{eqn:Kalpha-energy-out}, allows us to produce, for example, \Kalpha X-rays with energy up to \qty{26.25}{keV} from samples with atomic numbers up to at least $50$, ignoring the contribution from $b$.
 
 \begin{figure}[!htbp]
     \centering
@@ -100,13 +100,15 @@ Before determining the energies, we first need to calibrate the energy scale. We
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.5\textwidth]{img/calib.png}
-    \caption{Fe and Ag spectra used for calibration. On the x-axis, we have the energy of the detected signal in \unit{keV}. On the y-axis, we have the signal counts for the Ag spectrum. \reminder{fix figure}}\label{fig:calibration}
+    \includegraphics[width=\textwidth]{img/calibration.pdf}
+    \caption{Fe (in black) and Ag (in red) measured spectra used for calibration. On the x-axis, we have the energy of the detected signal $\varepsilon$ in \unit{keV}. On the left and right y-axes, we have the signal counts for the Fe and Ag spectra respectively. The vertical line labels are part of the built-in database of the software \emph{Cassy Lab 2}.}\label{fig:calibration}
 \end{figure}
 
 The first part of the experiment will test the validity of Moseley's Law making use of several samples of known substances.
 
 The second part and third part of the experiment will utilise our knowledge about X-rays to learn more about the composition of other samples, and about some metal coins from around the world.
+
+\subsection{Experimental errors}
 
 \section{Result and Analysis}
 
@@ -123,8 +125,8 @@ Recalling Equations \eqref{eqn:x-ray-energy} and \eqref{eqn:moseleys-eqn}, we ex
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{img/moseleys.png}
-    \caption{The figure shows a plot of $\sqrt{\varepsilon}$ vs $Z$ for given samples: \reminder{list samples}. The elements have been labelled on the plot. We have applied a linear fit to the two groups of data: (a) in blue, we have the samples for which we observe a \Kalpha line; (b) in orange, we have the samples for which we observe a \Lalpha line. The fit formula is also displayes next to the fitted line. \reminder{. produce better final figures}.}\label{fig:moseleys}
+    \includegraphics[width=\textwidth]{img/moseleys.pdf}
+    \caption{The figure shows a plot of measured $\sqrt{\varepsilon}$ vs $Z$ for the samples, listed in order of increasing Z: Ti, Ni, Cu, Mo, Zr for \Kalpha and Sn, W, Au, Pb for \Lalpha series. The elements have also been labelled on the plot. We have applied a linear fit to the two groups of data; the fit formula is also displayed next to the fitted line.}\label{fig:moseleys}
 \end{figure}
 
 Figure \ref{fig:moseleys} shows the fits for the two series. We can see that the data is fitted well by the model provided by Equation \eqref{eqn:moseleys-eqn}, given the experimental precision. We can therefore proceed to use X-ray K and L series lines as a signature of a given element in spectral analysis.
@@ -136,23 +138,31 @@ The ratio can also be calculated from the fitted values for the slopes, giving:
 Agreement is not so good, but we have not taken into account many other effects like change of energy due to being in a state $l \neq 0$ etc. So, not too bad. \reminder{must expand a bit maybe, + language style}.
 
 \subsection{Provided alloys and semiconductors}
-Now, can move to the analysis of samples. We will use fluorescence to determine the composition of the semiconductors from the non-MP part and of some unlabelled samples that are provided in the physics lab.
+We continue with the spectroscopic analysis of two semiconductor samples and several unlabelled samples.
 
 \subsubsection{Semiconductors}
-The semiconductors are part of the non-MP experiment, where we determined their structure by determination of the lattice constant. Here, we provide an independent confirmation of our previous results. 
+We have previously determined the composition of the semiconductor samples by measuring the lattice constant \reminder{cite non-mp}. Here, we will provide an independent confirmation of these results, as well as measure the relative composition.
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{img/spect-semiconductors.png}
-    \caption{Fluorescence spectra of the Fe, Ag calibration and semiconductors labelled as X2 and Y2 in sample boxes provided. We see that X2 and Y2 show traces of In, and Y2 shows additionally traces of Sb. \reminder{prob should go to appendix?}}
+    \includegraphics[width=0.8\textwidth]{img/spect-semiconductors.pdf}
+    \caption{Measured fluorescence spectra of the semiconductors labelled as X2 and Y2. The vertical line labels are part of the built-in database of the software \emph{Cassy Lab 2}. \reminder{prob should go to appendix?}}
     \label{fig:spect-semiconductors}
 \end{figure}
 
-We see that semiconductor Y2 shows traces of In and Sb, a group III and V elements respectively. This is a very common structure for semiconductors, so this is reassuring (\reminder{expand?}). In addition, this confirms our result from the first part of the practical, where we arrived at the conclusion that the semiconductor is an InSb via lattice diffraction. We can measure intensities of the \Kalpha lines for both, and calculate the ratios:
+The spectra of semiconductor samples X2 and Y2 are presented in Figure \ref{fig:spect-semiconductors}. First, both spectra show a strong \Kalpha line of In, a group III element. There is also a weak signal at the \Kalpha for Mo, which is just the signature of the anode in the X-ray source, so we can ignore it.
+
+Semiconductor Y2 also shows traces of Sb, a group III and V elements respectively. This is a very common structure for semiconductors, so this is reassuring (\reminder{expand? - moreso say "this is a well-known semiconductor etc"}). In addition, this confirms our result from the first part of the practical \reminder{ref}. We can measure intensities of the \Kalpha lines for both, and calculate the ratios:
 \begin{equation}
     \frac{n_\mathrm{In}}{n_\mathrm{Sb}} = \frac{I_\mathrm{In}}{I_\mathrm{Sb}} = \frac{122.5}{42.8} \approx 2.86 \quad \Rightarrow \quad p_\mathrm{In} = \frac{n_\mathrm{In}}{n_\mathrm{In}+n_\mathrm{Sb}} = 74 \% \quad p_\mathrm{Sb} = 26 \%
 \end{equation}
+We also have to note other two features:
+\begin{itemize}[noitemsep]
+    \item the \Lalpha peak at the cyan circle, where the \Lalpha lines for several elemnts lie;
+    \item the small peaks at the \Kalpha energies for Ge and Se.
+\end{itemize}
+These \reminder{finish}.
 
-For sample X2, we see a trace of In only. Checking with our result from the diffraction analysis, we see that the dopant is P (phosphorus). The characteristic X-rays of P in K-series (most energetic ones) have energies around \qty{2}{keV}, which is around our detection limit of about \qtyrange{2}{4}{keV}. This highlights one of the shortcomings of our method: it is limited in detecting only those elements, which have X-ray emission lines in the range of the bremsstrahlung and the range of operation of the detector.
+For sample X2, we see a trace of In only. Checking with our result from the diffraction analysis \reminder{sub in with ref}, we see that the dopant is P (phosphorus). The characteristic X-rays of P in K-series (the most energetic ones) have energies around \qty{2}{keV}, which is around our detection limit of about \qtyrange{2}{4}{keV}. This highlights one of the shortcomings of our method: it is limited in detecting only those elements, which have X-ray emission lines in the range of the bremsstrahlung and the range of operation of the detector.
 
 \subsubsection{Unlabelled alloys}\label{subsubsec:unlabelled-alloys}
 The lab has two boxes of unlabelled metallic samples - alloys of different metals. We can determine their composition and ratios by using Section \ref{subsec:compos-analysis}. Result is presented in Table \ref{tab:unlabelled-alloys}.
@@ -170,34 +180,31 @@ The lab has two boxes of unlabelled metallic samples - alloys of different metal
     @{}
     }
 \toprule
-sample & element  & line   &{intensity}& {Kalph/Kbet}& {nA/nB}  & {prop}   & {by mass}   \\ \midrule
-b1-1   & Cr       & Kalpha & 381.9     & 5.550872093 & 0.422877 & 0.297198 & 0.277555397 \\
-b1-1   & Cr       & Kbeta  & 68.8      &             &          &          &             \\
-b1-1   & Fe       & Kalpha & 903.1     & 4.138863428 &          & 0.702802 & 0.722444603 \\
-b1-1   & Fe       & Kbeta  & 218.2     &             &          &          &             \\ \midrule
-b1-2   & Cu       & Kalpha & 2110.2    & 6.136086072 & 1.783921 & 0.640794 & 0.691408371 \\
-b1-2   & Cu       & Kbeta  & 343.9     &             &          &          &             \\
-b1-2   & Zn       & Kalpha & 1182.9    & 17.09393064 &          & 0.359206 & 0.308591629 \\
-b1-2   & Zn       & Kbeta  & 69.2      &             &          &          &             \\ \midrule
-b1-3   & Cu       & Kalpha & 3947.9    & 14.32994555 & 1.265515 & 0.558599 & 0.613815022 \\
-b1-3   & Cu       & Kbeta  & 275.5     &             &          &          &             \\
-b1-3   & Zn       & Kalpha & 3119.6    & 16.51455797 &          & 0.441401 & 0.386184978 \\
-b1-3   & Zn       & Kbeta  & 188.9     &             &          &          &             \\ \midrule
-b2-a   & unusable &        &           &             &          &          &             \\ \midrule
-b2-b   & unusable &        &           &             &          &          &             \\ \midrule
-b2-c   & Fe       & Kalpha & 1351.9    & 3.736594804 & 2.062081 & 0.673425 & 0.694639809 \\
-b2-c   & Fe       & Kbeta  & 361.8     &             &          &          &             \\
-b2-c   & Zn       & Kalpha & 655.6     & 8.569934641 &          & 0.326575 & 0.305360191 \\
-b2-c   & Zn       & Kbeta  & 76.5      &             &          &          &             \\ \midrule
-b2-d   & Fe       & Kalpha & 1443.6    & 3.921760391 & 3.421664 & 0.773841 & 0.790561437 \\
-b2-d   & Fe       & Kbeta  & 368.1     &             &          &          &             \\
-b2-d   & Zn       & Kalpha & 421.9     & 9.743648961 &          & 0.226159 & 0.209438563 \\
-b2-d   & Zn       & Kbeta  & 43.3      &             &          &          &             \\ \midrule
-b2-e   & unusable &        &           &             &          &          &             \\ \midrule
-b2-f   & Fe       & Kalpha & 1443.3    & 3.885060565 & 2.559496 & 0.719061 & 0.738463241 \\
-b2-f   & Fe       & Kbeta  & 371.5     &             &          &          &             \\
-b2-f   & Zn       & Kalpha & 563.9     & 9.367109635 &          & 0.280939 & 0.261536759 \\
-b2-f   & Zn       & Kbeta  & 60.2      &             &          &          &             \\ \bottomrule
+Sample & Element & Line & {$I$} & {$I(\mathrm{K}_\alpha) / I(\mathrm{K}_\beta)$} & {$n_\mathrm{A} / n_\mathrm{B}$} & {$n / n_\mathrm{tot}$} & {$\rho / \rho_\mathrm{tot}$} \\ \midrule
+b1-1 & Cr & \Kalpha & 381.9  & 5.550872093 & 0.422877 & 0.297198 & 0.277555397 \\
+b1-1 & Cr & \Kbeta  & 68.8   &             &          &          &             \\
+b1-1 & Fe & \Kalpha & 903.1  & 4.138863428 &          & 0.702802 & 0.722444603 \\
+b1-1 & Fe & \Kbeta  & 218.2  &             &          &          &             \\ \midrule
+b1-2 & Cu & \Kalpha & 2110.2 & 6.136086072 & 1.783921 & 0.640794 & 0.691408371 \\
+b1-2 & Cu & \Kbeta  & 343.9  &             &          &          &             \\
+b1-2 & Zn & \Kalpha & 1182.9 & 17.09393064 &          & 0.359206 & 0.308591629 \\
+b1-2 & Zn & \Kbeta  & 69.2   &             &          &          &             \\ \midrule
+b1-3 & Cu & \Kalpha & 3947.9 & 14.32994555 & 1.265515 & 0.558599 & 0.613815022 \\
+b1-3 & Cu & \Kbeta  & 275.5  &             &          &          &             \\
+b1-3 & Zn & \Kalpha & 3119.6 & 16.51455797 &          & 0.441401 & 0.386184978 \\
+b1-3 & Zn & \Kbeta  & 188.9  &             &          &          &             \\ \midrule
+b2-c & Fe & \Kalpha & 1351.9 & 3.736594804 & 2.062081 & 0.673425 & 0.694639809 \\
+b2-c & Fe & \Kbeta  & 361.8  &             &          &          &             \\
+b2-c & Zn & \Kalpha & 655.6  & 8.569934641 &          & 0.326575 & 0.305360191 \\
+b2-c & Zn & \Kbeta  & 76.5   &             &          &          &             \\ \midrule
+b2-d & Fe & \Kalpha & 1443.6 & 3.921760391 & 3.421664 & 0.773841 & 0.790561437 \\
+b2-d & Fe & \Kbeta  & 368.1  &             &          &          &             \\
+b2-d & Zn & \Kalpha & 421.9  & 9.743648961 &          & 0.226159 & 0.209438563 \\
+b2-d & Zn & \Kbeta  & 43.3   &             &          &          &             \\ \midrule
+b2-f & Fe & \Kalpha & 1443.3 & 3.885060565 & 2.559496 & 0.719061 & 0.738463241 \\
+b2-f & Fe & \Kbeta  & 371.5  &             &          &          &             \\
+b2-f & Zn & \Kalpha & 563.9  & 9.367109635 &          & 0.280939 & 0.261536759 \\
+b2-f & Zn & \Kbeta  & 60.2   &             &          &          &             \\ \bottomrule
 \end{tabular}
 \caption{Table of the fitted intensities in alloy samples. Some of the measurements made had signal comparable with the background due to a human error during data acquisition; included here for completeness. \reminder{add a column with line energy, improve siunitx for number formatting, prob delete the unusable ones}}
 \label{tab:unlabelled-alloys}
@@ -243,7 +250,7 @@ We analysed various coins from around the world, the content of which we can aga
     26 & Canada         & 25c            & yes & yes & no  & Fe?   \\
     27 & Brazil         & 5 centavos     & no  & yes & no  & no    \\ \bottomrule
     \end{tabular}
-    \caption{Table of metal composition for a selection of international coins.}
+    \caption{Table of measured metal composition for a selection of international coins.}
     \label{tab:coin-measured}
 \end{table}
 
@@ -291,6 +298,48 @@ Finally, we report on the composition of an array of international coins. We dis
 \renewcommand{\thefigure}{\Alph{section}\arabic{figure}}
 \setcounter{figure}{0}
 \renewcommand{\sectionmark}[1]{\markboth{\thesection.\ #1}{}}
+
+\section{X-ray diffraction}\label{sec:diffraction-experiment}
+The first part of the practical featured several experiments in X-ray diffraction. X-rays undergo diffraction in crystals according to Bragg's Law:
+\begin{equation}
+    n \lambda = 2 d \sin \theta
+\end{equation}
+with $\lambda$ the wavelength of the incident X-ray, $d$ the interplanar crystal spacing, $\theta$ the angle of the ray to the crystal plane, and $n$ some integer value. This means the angle between the incident and diffracted beam is $2 \theta$.
+
+In our setup (see left of Figure \ref{fig:diffraction-setup}) we have a fixed molybdenum X-ray source which emits a characteristic \Kalpha X-ray. We can use this fixed X-ray wavelength in our diffraction experiment to determine the value of the lattice constant $a$ for some sample. We scan the diffracted intensity as a function of $\theta$ by simultaneously rotating the sample by $\theta$ and the detector by $2\theta$. An example can be seen in Figure \ref{fig:diffraction-setup}. We can therefore fit $n \lambda$ vs $\sin \theta$ to find the value of $d$.
+
+\begin{figure}[!htbp]
+    \hfill
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/diffraction-setup.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.56\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/diffraction-LiF.pdf}
+    \end{subfigure}
+    \hfill
+    \caption{Left: Diffraction setup. Label 1 is the source aperture, label 2 is the sample material at angle $\theta$ to the incident beam, label 3 is the detector. Source: \cite{OxfPhys2010}. Right: Diffraction results for LiF. On the x-axis, we have the angle of diffraction $\theta$. On the y-axis, we have logarithm of the detected rate of X-rays.}
+    \label{fig:diffraction-setup}
+\end{figure}
+
+The interplanar spacing $d$ is determined by the type of crystal we observe and the direction we take as normal. Since the crystal planes are physical planes that intersect atoms, we can determine the rules for the allowed sets of crystal planes and their respective values of $d$. These are given by the \emph{Miller indices}; the rules for which Miller indices are allowed depending on the crystal can be found in \cite{OxfPhys2010}. This gives us the following relationship:
+\begin{equation}
+    \frac{1}{d^2} = \frac{h^2}{a^2} + \frac{k^2}{b^2} + \frac{l^2}{c^2}, \qquad \text{for cubic: } \frac{1}{d^2} = \frac{h^2 + k^2 + l^2}{a^2}.
+\end{equation}
+Here $a$, $b$, and $c$ are lattice parameters.
+
+First, we measure the values of $a$ for two BCC crystals - LiF and NaCl. The crystals have been cut so that the flat exposed part is the $\left(h,k,l\right) = \left(1,0,0\right)$ family of planes, hence $d = a$, and are FCC (face-centred cubic) crystals. The lattice constants measured are:
+\begin{equation}
+    \text{LiF: } a = \qty[separate-uncertainty-units = single]{403.9(6)}{pm} \qquad \text{NaCl: } a = \qty[separate-uncertainty-units = single]{564.9(8)}{pm}.
+\end{equation}
+
+Then, we measured the values of $a$ for two semiconductor samples X2, Y2. We know that their crystal structure is zincblende, which has the same primitive FCC lattice. We also know they are cut so that the flat exposed part is the $\left(h,k,l\right) = \left(1,1,1\right)$ family of planes, hence $d = a / \sqrt{3}$. We measure the lattice constants as:
+\begin{equation}
+    \text{X2: } a = \qty[separate-uncertainty-units = single]{585.65(87)}{pm} \qquad \text{Y2: } a = \qty[separate-uncertainty-units = single]{648.57(94)}{pm}.
+\end{equation}
+Comparing to a database of semiconductors, we find that the samples are as follows: X2 is InP with $a = \qty{586.87}{pm}$ and Y2 is InSb with $a = \qty{647.9}{pm}$.
 
 \section{Energy spectra plots}
 \begin{figure}[!htbp]
