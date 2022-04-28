@@ -85,12 +85,12 @@
 \usepackage{wasysym}
 
 % SI units - commands
-% \qty{value}{unit command}
+% \qty{value(uncertainty)}{unit command}
 % \num{value} for numerals only
 % \unit{unit} for unit only
 \usepackage{siunitx}
 % setup to display how I want it
-\sisetup{separate-uncertainty = true, multi-part-units = brackets}
+%\sisetup{separate-uncertainty = true, multi-part-units = brackets}
 
 % Fractions as powers - command \sfrac
 \usepackage{xfrac}
@@ -108,11 +108,21 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 
+\usepackage[style=numeric, sorting=none]{biblatex}
+\addbibresource{references.bib}
 %%% References
 % Bibliography
-%\usepackage{bibtex}	% old tech, still good for basic bibs
-% Natbib - easiest to combine with JabRef for bibliography management.
-\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage[style=numeric, sorting=none]{biblatex}
+\addbibresource{references.bib}
+% -- to include in text, use
+% \printbibliography[title=#desired-title] - for different title
+% \printbibliography
+% -- after the main text, before appendix
+
+% -- old tech, still good for basic bibs
+% \usepackage{bibtex}	
+% \usepackage[sort,comma,numbers,square]{natbib}
+% \usepackage{notoccite}
 % -- Extra jazz, if you want to customize beyond available options in the package
 % \setcitestyle{authoryear,open={(},close={)}}
 % \let\OLDthebibliography\thebibliography
@@ -121,8 +131,7 @@
 %   \setlength{\parskip}{3pt}
 %   \setlength{\itemsep}{0pt plus 0.3ex}
 % }
-% --
-% To include in text, use
+% -- To include in text, use
 % \bibliographystyle{plain} -- preferred view of bibs, has to be included in the main .tex file and not in the custom package file
 % \renewcommand{\bibname}{#new-name} -- rename the title of bibliography chapter
 % \bibliography{#name-of-bib} -- command to include in compiled file

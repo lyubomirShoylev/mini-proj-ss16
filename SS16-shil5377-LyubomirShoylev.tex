@@ -6,7 +6,6 @@
 \date{\today}
 % My report package :)
 \usepackage{my-report}
-\usepackage[default-range=1-1]{lipsum}
 \newcommand{\reminder}[1]{\textcolor{red}{#1}}
 \newcommand{\rydberg}{R}
 \newcommand{\Kalpha}{$\mathrm{K}_\alpha$~}
@@ -35,7 +34,7 @@ We can rewrite this at fixed $n_\mathrm{i}$, $n_\mathrm{f}$ (i.e. for a given li
     \sqrt{\varepsilon} = m \times Z + C,
 \end{equation}  where $m$, $C$ are constants. This relationship is known as `Moseley's Law'.
 
-The name convention of the low-$n$ energy levels in X-ray notation is given in Table \ref{tab:siegbahn-notation}. The energy difference between different L, M levels is not large, so if we have a low resolution detector we usually observe e.g. only one \Kalpha line.\reminder{quantify this plox.}
+The name convention of the low-$n$ energy levels in X-ray notation is given in Table \ref{tab:siegbahn-notation}. The energy difference between different L, M levels is not large, so if we have a low resolution detector we usually observe e.g. only one \Kalpha line. Consider the example of Iron (Fe), for which we have values of $\mathrm{K}_{\alpha 1} = \qty{6404.0062(99)}{eV}$ and $\mathrm{K}_{\alpha 2} = \qty{6391.0264(99)}{eV}$ taken from \cite{Hudson2003}. We can compare that to the FWHM of the detector we use in this experiment, which is about \qty{400}{eV} in the range of measurement. The difference in the two \Kalpha components is \qty{13}{eV}, which is much less, so we do not resolve them.
 \begin{table}[!htbp]
     \centering
     \begin{tabular}{@{}llll@{}}
@@ -149,18 +148,17 @@ We have previously determined the composition of the semiconductor samples by me
     \label{fig:spect-semiconductors}
 \end{figure}
 
-The spectra of semiconductor samples X2 and Y2 are presented in Figure \ref{fig:spect-semiconductors}. First, both spectra show a strong \Kalpha line of In, a group III element. There is also a weak signal at the \Kalpha for Mo, which is just the signature of the anode in the X-ray source, so we can ignore it.
+The spectra of semiconductor samples X2 and Y2 are presented in Figure \ref{fig:spect-semiconductors}. First, both spectra show a strong \Kalpha line of In, a group III element. There is also a weak signal at the \Kalpha for Mo, which is just the signature of the anode in the X-ray source, so we can ignore it. We also have to note other two features:
+\vspace*{-4pt}
+\begin{itemize}[noitemsep]
+    \item the \Lalpha peak at the cyan circle, where the \Lalpha lines for several elemnts lie;
+    \item the small peaks around \qty{10}{keV}, which are caused by fluorescence from the detector materials (more details in the reference sheet by the equipment provider in \cite{xRayManual}). These particular lines are fluorescence lines of gold (Au), as marked in Figure \ref{fig:spect-semiconductors}.
+\end{itemize}
 
 Semiconductor Y2 also shows traces of Sb, a group III and V elements respectively. This is a very common structure for semiconductors, so this is reassuring (\reminder{expand? - moreso say "this is a well-known semiconductor etc"}). In addition, this confirms our result from \ref{sec:diffraction-experiment}. We can measure intensities of the \Kalpha lines for both, and calculate the ratios:
 \begin{equation}
     \frac{n_\mathrm{In}}{n_\mathrm{Sb}} = \frac{I_\mathrm{In}}{I_\mathrm{Sb}} = \frac{122.5}{42.8} \approx 2.86 \quad \Rightarrow \quad p_\mathrm{In} = \frac{n_\mathrm{In}}{n_\mathrm{In}+n_\mathrm{Sb}} = 74 \% \quad p_\mathrm{Sb} = 26 \%
 \end{equation}
-We also have to note other two features:
-\begin{itemize}[noitemsep]
-    \item the \Lalpha peak at the cyan circle, where the \Lalpha lines for several elemnts lie;
-    \item the small peaks at the \Kalpha energies for Ge and Se.
-\end{itemize}
-These \reminder{finish}.
 
 For sample X2, we see a trace of In only. Checking with our result from the diffraction analysis from \ref{sec:diffraction-experiment}, we see that the dopant is P (phosphorus). The characteristic X-rays of P in K-series (the most energetic ones) have energies around \qty{2}{keV}, which is around our detection limit of about \qtyrange{2}{4}{keV}. This highlights one of the shortcomings of our method: it is limited in detecting only those elements, which have X-ray emission lines in the range of the bremsstrahlung and the range of operation of the detector.
 
@@ -286,9 +284,8 @@ Finally, we report on the composition of an array of international coins. We dis
 
 \reminder{future plans to improve: e.g. normalize with a plain bremsstrahlung to better fit values, esp if away from eachother.}
 
-\bibliographystyle{plain}
-% \renewcommand{\bibname}{#new-name} -- rename the title of bibliography chapter
-\bibliography{references.bib}
+% \printbibliography[title=#desired-title] - for different title
+\printbibliography
 
 \newpage
 \appendix
@@ -332,12 +329,12 @@ Here $a$, $b$, and $c$ are lattice parameters.
 
 First, we measure the values of $a$ for two BCC crystals - LiF and NaCl. The crystals have been cut so that the flat exposed part is the $\left(h,k,l\right) = \left(1,0,0\right)$ family of planes, hence $d = a$, and are FCC (face-centred cubic) crystals. The lattice constants measured are:
 \begin{equation}
-    \text{LiF: } a = \qty[separate-uncertainty-units = single]{403.9(6)}{pm} \qquad \text{NaCl: } a = \qty[separate-uncertainty-units = single]{564.9(8)}{pm}.
+    \text{LiF: } a = \qty{403.9(6)}{pm} \qquad \text{NaCl: } a = \qty{564.9(8)}{pm}.
 \end{equation}
 
 Then, we measured the values of $a$ for two semiconductor samples X2, Y2. We know that their crystal structure is zincblende, which has the same primitive FCC lattice. We also know they are cut so that the flat exposed part is the $\left(h,k,l\right) = \left(1,1,1\right)$ family of planes, hence $d = a / \sqrt{3}$. We measure the lattice constants as:
 \begin{equation}
-    \text{X2: } a = \qty[separate-uncertainty-units = single]{585.65(87)}{pm} \qquad \text{Y2: } a = \qty[separate-uncertainty-units = single]{648.57(94)}{pm}.
+    \text{X2: } a = \qty{585.65(87)}{pm} \qquad \text{Y2: } a = \qty{648.57(94)}{pm}.
 \end{equation}
 Comparing to a database of semiconductors, we find that the samples are as follows: X2 is InP with $a = \qty{586.87}{pm}$ and Y2 is InSb with $a = \qty{647.9}{pm}$.
 
@@ -362,41 +359,41 @@ Comparing to a database of semiconductors, we find that the samples are as follo
 \end{figure}
 
 
-\section{Extracted intensity data}
-Add data here as tables, refer to it when needed.
+\section{Official Coin Data}
+We present the official data of the coin composition given by the coin issuing officials in Table \ref{tab:coins-official}.The sources for the coins per country of origin are: UK \cite{RoyalMint}, Singapore \cite{SingaporeOld,SingaporeNew}, EU \cite{2014EUCoins}, Norway \cite{1997NorwayKrone}, Switzerland \cite{SwissCentime}, Sweden \cite{SwedenKrona}, Japan \cite{JapanYen}, Hong Kong \cite{HongKongCent}, USA \cite{USACoins}.
 
 \begin{table}[htbp]
     \centering
     \begin{tabular}{@{}llllllll@{}}
         \toprule
         No & Country        & Denomination   & Ni,\%    & Cu, \%   & Zn, \% & Other, \%            & Weight, g  \\ \midrule
-        3  & United Kingdom & 50p old        & 25       & 75       & 0      & 0                    &            \\
-        4  & United Kingdom & 50p new        & 25       & 75       & 0      & 0                    &            \\
-        5  & United Kingdom & 20p new        & 16       & 84       & 0      & 0                    &            \\
-        6  & United Kingdom & 10p old        & 25       & 75       & 0      & 0                    &            \\
-        7  & United Kingdom & 10p new        & 6        & 0        & 0      & mild Steel - 94      &            \\
-        8  & United Kingdom & 2p new         & 0        & 6        & 0      & mild Steel - 94      &            \\
+        3  & United Kingdom & 50p old        & 25       & 75       & 0      & 0                    & 8          \\
+        4  & United Kingdom & 50p new        & 25       & 75       & 0      & 0                    & 8          \\
+        5  & United Kingdom & 20p new        & 16       & 84       & 0      & 0                    & 5          \\
+        6  & United Kingdom & 10p old        & 25       & 75       & 0      & 0                    & 6.5        \\
+        7  & United Kingdom & 10p new        & 6        & 0        & 0      & mild Steel - 94      & 6.5        \\
+        8  & United Kingdom & 2p new         & 0        & 6        & 0      & mild Steel - 94      & 7.12        \\
         9  & Singapore      & 1 dollar old   & 2        & 92       & 0      & Al - 6               & 8.05+-0.20 \\
         10 & Singapore      & 50c old        & 25       & 75       & 0      & 0                    & 8.56+-0.20 \\
         11 & Singapore      & 20c new        & ?        & 0        & 0      & steel - ?            & 6.56+-0.28 \\
         12 & Bulgaria       & 50 stotinki    & 10       &          &        & 0                    & 5          \\
         13 & Bulgaria       & 5 stotinki     &          &          &        & steel - ?            & 3.5        \\
         14 & European Union & 50c            & 0        & 89       & 5      & Al - 5, Sn -1        & 7.8        \\
-        15 & European Union & 2c old         &          & x        &        & 0                    & 3.06       \\
-        16 & European Union & 2c new         &          & x        &        & 0                    & 3.06       \\
+        15 & European Union & 2c old         & 0        & plating  & 0      & steel core           & 3.06       \\
+        16 & European Union & 2c new         & 0        & plating  & 0      & steel core           & 3.06       \\
         17 & Romania        & 10 bani        & ?        & 0        & 0      & steel - ?            & 4          \\
         18 & Norway         & 1 krone        & 25       & 75       & 0      & 0                    & 4.35       \\
         19 & Switzerland    & 20 centim      & 25       & 75       & 0      & 0                    & 4          \\
-        20 & Sweden         & 1 krona        & 25       & 75       & 0      & 0                    &            \\
+        20 & Sweden         & 1 krona        & 25       & 75       & 0      & 0                    & 7          \\
         21 & Japan          & 1 yen          & 0        & 0        & 0      & al-100               & 1          \\
         22 & Hong Kong      & 10c            &          &          &        & 0                    & 1.85       \\
         23 & Uganda         & 200 schillings & $\sim$30 & $\sim$70 & 0      & 0                    & 8.5        \\
-        24 & USA            & 25c            &          &          &        & 0                    &            \\
+        24 & USA            & 25c            & 8.33     & 91.66    &        & 0                    & 5.670       \\
         25 & USA            & 1c             & 0        & 2.5      & 97.5   & 0                    & 2.5        \\
         26 & Canada         & 25c            & 2.2      & 3.8      & 0      & Steel AISI 1006 - 94 & 4.4        \\
         27 & Brazil         & 5 centavos     & 0        &          &        & 0                    &            \\ \bottomrule
     \end{tabular}
-    \caption{Table of official info about the international coins. Notable are the coins with predominantly steel composition with a coating of one fo the three main elements. \reminder{CITATIONS}}
+    \caption{Table of official info about the international coins. Notable are the coins with predominantly steel composition with a coating of one fo the three main elements.}
     \label{tab:coins-official}
 \end{table}
 
