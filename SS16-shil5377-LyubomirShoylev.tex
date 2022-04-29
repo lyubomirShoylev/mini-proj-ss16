@@ -34,7 +34,7 @@ We can rewrite this at fixed $n_\mathrm{i}$, $n_\mathrm{f}$ (i.e. for a given li
     \sqrt{\varepsilon} = m \times Z + C,
 \end{equation}  where $m$, $C$ are constants. This relationship is known as `Moseley's Law'.
 
-The name convention of the low-$n$ energy levels in X-ray notation is given in Table \ref{tab:siegbahn-notation}. The energy difference between different L, M levels is not large, so if we have a low resolution detector we usually observe e.g. only one \Kalpha line. Consider the example of Iron (Fe), for which we have values of $\mathrm{K}_{\alpha 1} = \qty{6404.0062(99)}{eV}$ and $\mathrm{K}_{\alpha 2} = \qty{6391.0264(99)}{eV}$ taken from \cite{Hudson2003}. We can compare that to the FWHM of the detector we use in this experiment, which is about \qty{400}{eV} in the range of measurement. The difference in the two \Kalpha components is \qty{13}{eV}, which is much less, so we do not resolve them.
+The name convention of the low-$n$ energy levels in X-ray notation is given in Table \ref{tab:siegbahn-notation}. The energy difference between different L, M levels is not large, so if we have a low resolution detector we usually observe e.g. only one \Kalpha line. Consider the example of Iron (Fe), for which we have values of $\mathrm{K}_{\alpha 1} = \qty{6404.0062(99)}{eV}$ and $\mathrm{K}_{\alpha 2} = \qty{6391.0264(99)}{eV}$ taken from \cite{Hudson2003}. We can compare that to the FWHM of the detector we use in this experiment, which is about \qty{400}{eV} in the range of measurement (taken from \cite{xRayManual}). The difference in the two \Kalpha components is \qty{13}{eV}, which is much less, so we do not resolve them.
 \begin{table}[!htbp]
     \centering
     \begin{tabular}{@{}llll@{}}
@@ -93,7 +93,7 @@ Our experiment consists of the setup presented in Figure \ref{fig:experim-setup}
     \caption{Diagram of the experimental setup. More information can be found in the text of Section \ref{sec:experiment}.}\label{fig:experim-setup}
 \end{figure}
 
-To operate the apparatus and extract data, we use the software \emph{CASSY Lab 2} (see \cite{cassylab2}). The program has a built in database for the X-ray emission lines of most elements. It also allows for calculating a peak centre and fitting Gaussian profiles with specified energy to find the intensity of emission lines. (\reminder{expand on applicability since x-ray lines are asymmetrical.})
+To operate the apparatus and extract data, we use the software \emph{CASSY Lab 2} (see \cite{cassylab2}). The program has a built in database for the X-ray emission lines of most elements. It also allows for calculating a peak centre and fitting Gaussian profiles with specified energy to find the intensity of emission lines. While the natural broadening of X-rays is asymmetrical, according to \cite{Krause1979} the linewidths of e.g. Fe \Kalpha level is $\mathrm{FWHM} \approx \qty{2}{eV}$. On the other side, the experimental accuracy is $\mathrm{FWHM} \approx \qty{400}{eV}$ for our values. Therefore, we can go ahead and use Gaussian fitting as a first approximation to the observed emission lines.
 
 Before determining the energies, we first need to calibrate the energy scale. We will use two known samples - Fe and Ag. We choose these two samples since their \Kalpha lines lie at the two ends of the range of energies for which our samples have emission lines. The particular lines which we use to calibrate are the Fe \Kalpha with $E_\mathrm{Fe} = \qty{6.40}{keV}$ and the Ag \Kalpha with $E_\mathrm{Ag} = \qty{22.17}{keV}$. Also note the observational lower and upper limits, respectively \qtyrange{2}{4}{keV} and $\approx \qty{35}{keV}$. The calibration spectra are presented in Figure \ref{fig:calibration}.
 
@@ -121,6 +121,7 @@ Recalling Equations \eqref{eqn:x-ray-energy} and \eqref{eqn:moseleys-eqn}, we ex
 \begin{equation}
     m_\mathrm{K} = \sqrt{\rydberg_\infty} \left(1 - \frac{1}{2^2}\right)^{\sfrac{1}{2}} \propto \sqrt{\frac{3}{4}},\quad m_\mathrm{L} = \sqrt{\rydberg_\infty} \left(\frac{1}{2^2} - \frac{1}{3^2}\right)^{\sfrac{1}{2}} \propto \sqrt{\frac{5}{36}} \quad \Rightarrow \quad \frac{m_\mathrm{K}}{m_\mathrm{L}} = \sqrt{\frac{27}{5}}.
 \end{equation}
+\cite{}
 
 \begin{figure}[!htbp]
     \centering
@@ -134,7 +135,7 @@ The ratio can also be calculated from the fitted values for the slopes, giving:
 \begin{equation}
     \text{predicted: }\frac{m_\mathrm{K}}{m_\mathrm{L}} = \sqrt{\frac{27}{5}} = 2.324,\qquad \text{observed: } \frac{m_\mathrm{K}}{m_\mathrm{L}} = \frac{0.1026}{0.0411} = 2.496.
 \end{equation}
-Agreement is not so good, but we have not taken into account many other effects like change of energy due to being in a state $l \neq 0$ etc. So, not too bad. \reminder{must expand a bit maybe, + language style}.
+While the slope ratio is not the same as the one predicted, we have good linear fits. The difference can be attributed to a modification to the multiplicative constant.
 
 \subsection{Provided alloys and semiconductors}
 We continue with the spectroscopic analysis of two semiconductor samples and several unlabelled samples.
